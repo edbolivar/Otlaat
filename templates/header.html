@@ -1,0 +1,72 @@
+<div id="headerBgWrapper">
+	<div class="container"><!--container-->
+		<div class="row">
+			<div class="col-xs-12 col-sm-3 col-md-2 marginTop15 full-width-769">
+				<div ng-include="'templates/sidebar.html'"></div>
+				<a href="#/">
+					<div class="logo"></div>
+				</a>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="col-sm-1 col-md-1 marginTop15 marginTop20 choose-language__container">
+				<span ng-controller="translateController" class="ChooseLanguage">
+					<a href ng-click="changeLanguage('en', true)" ng-show="languageavailable"><img
+							src="css/images/english.png" height="15"/></a>
+					<a href href ng-click="changeLanguage('ar', true)" ng-hide="languageavailable"><img
+							src="css/images/arabic.png" height="15"/></a>
+				</span>
+			</div>
+
+			<div class="col-sm-1 col-md-1 marginTop15 marginTop20 choose-currency__container" ng-controller="currencyConverterController">
+				<span ng-if="!isCurrencyShow" class="ChooseLanguage">
+					<a href ng-click="currencyConverter('usd', true)" ng-show="currecnyAvailable" class="currency">USD</a>
+					<a href ng-click="currencyConverter('sar', true)" ng-hide="currecnyAvailable" class="currency">SAR</a>
+				</span>
+			</div>
+
+
+
+			<div ng-controller="ModalCtrl as $ctrl" class="modal-demo">
+				<script type="text/ng-template"></script> 
+				<!-- Welcome msg starts -->
+				<div ng-if="loginData" class="helloUser hidden-xs" style="color: white;margin-top: 20px;margin-bottom: 8px;"
+					 ng-class="{'pull-left margin-left-23': lang === 'ar'}">
+                    <span uib-dropdown>
+						<a href id="simple-dropdown" class="ChooseLanguage" uib-dropdown-toggle>
+                            <span translate="login.helloUser" translate-value-username="{{loginData.name}}"></span>
+                            <span class="glyphicon glyphicon-chevron-down"></span></a>
+						<ul class="dropdown-menu header-dropdown" uib-dropdown-menu aria-labelledby="simple-dropdown">
+							<li><a ui-sref="base"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>{{'Navhome' | translate}}</a></li>
+						    <li><a ng-click="$ctrl.goToUserProfile()"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{'NavUserProfile' | translate}}</a></li>
+						    <li><a href ng-click="logout()"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>{{'global.logout' | translate}}</a></li>
+						</ul>
+					</span>
+				</div> 
+
+				<div ng-if="!loginData" class="hidden-xs">
+					<div class="signButtons" ng-class="{'pull-left margin-left-23': lang === 'ar'}">
+						<button type="button" class="btn btn-login loginRegisterBtnResponsive marginTop15 marginRight15"
+								style="margin-right: 15px;"
+								template-url="templates/modal/login.html" ng-click="$ctrl.openLoginModal('sm')"
+								translate="global.signIn">Sign In
+						</button>
+						<button type="button" class="btn btn-danger loginRegisterBtnResponsive marginTop15"
+								template-url="templates/modal/register.html"
+								ng-click="$ctrl.openRegisterModal('lg')"
+								translate="global.signUp">Sign Up
+						</button>
+					</div>
+					<div>
+						<!-- Show here the Login User's detail. -->
+					</div>
+				</div>
+				<!-- Welcome msg ends-->
+			</div>
+
+		</div><!--row-->
+	</div><!--container End-->
+</div>
+
+
+

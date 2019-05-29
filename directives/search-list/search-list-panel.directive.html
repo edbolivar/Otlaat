@@ -1,0 +1,116 @@
+<!--Change to make sure that this version and live are the same, it's not the same currently!-->
+<form name="hotelSearchForm"  novalidate="" id="hotelSearchForm" ng-submit="searchHotels(hotelSearchForm)">
+    <!-- Destination starts -->
+    <div class="datepicker col-sm-3 col-md-4 mob datepicker-destination" >
+        <h5 ng-class="{'required-text': $root.showErrorDestinationMsg}">{{'destination' | translate}} <span ng-show="$root.showErrorDestinationMsg"> - is required!</span></h5>
+        <div class='typeahead-demo' ng-controller="TypeaheadCtrl" style="padding-left: 0 !important;"
+             ng-class="{'arabic': $root.lang === 'ar'}">
+            <input id="txtDestination" required
+                   type="text" ng-model="hotelSearch.chosenDestination" placeholder="{{'destination' | translate}}"
+                   ng-class="{'required-input': $root.showErrorDestinationMsg}"
+                   typeahead-loading="loadingLocations"
+                   typeahead-is-open="typeAheadIsOpen"
+                   uib-typeahead="item as item.name for item in getDestinations($viewValue)"
+                   typeahead-min-length="3" autocomplete="off"
+                   class="form-control location-autocomplete"/>
+            <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+            <div ng-show="showErrorMsg"  ng-click="showErrorMsg = false"
+                 auto-close="disabled" is-open="true" uib-dropdown uib-dropdown-toggle>
+                <ul class="dropdown-menu" set-dropdown-width is-opens="showErrorMsg" dropdown-id="txtDestination"
+                    ng-class="{'error-msg-open': showErrorMsg}">
+                    <i class="glyphicon glyphicon-remove"></i>
+                    {{::errorMsg}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Destination ends -->
+
+    <div class="calendar-datepicker">
+        <!-- Calendar starts -->
+        <search-calendar ng-class="{'arabic': $root.lang === 'ar'}"
+                         start-date="dates.startDate"
+                         end-date="dates.endDate"
+                         is-required="true"  small-size-format="true">
+        </search-calendar>
+        <!-- Calendar ends -->
+        <!-- Traveller starts -->
+        <div class="col-sm-2 col-md-3 datepicker mob datepicker-options">
+            <h5>{{'travelers' | translate}}</h5>
+            <span uib-dropdown class="date-picker-options" is-open="isOpenChosenOption">
+                <button type="button" class="form-control dropdown-btn"
+                        id="btn-chosen-option" uib-dropdown-toggle>
+                    {{chosenOption.text}}
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <ul class="dropdown-menu" set-dropdown-width is-opens="isOpenChosenOption"
+                    dropdown-id="btn-chosen-option"
+                    ng-class="{'arabic': $root.lang === 'ar'}" uib-dropdown-menu
+                    aria-labelledby="simple-dropdown">
+                    <li>
+                        <a href="javascript:void(0)" ng-click="changeOption(option)"
+                           ng-repeat="option in datePickerOptions track by $index">{{option.text}}</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <!-- Traveller ends -->
+    </div>
+
+    <!-- MODIFY button starts -->
+    <div class='pull-left margin-left-10 modify-search-button'>
+        <!--<div class="col-md-2 datepicker mob margin-left-35">-->
+        <h5 class="invisible">{{'travelers' | translate}}</h5>
+        <input type="submit"
+               class="btn btn-sm btn-primary mobBtn modify-search-button datepicker-submit"
+               value="Modify search"  translate="hotelDetails.modifySearch">
+    </div>
+    <!-- MODIFY button ends -->
+
+    <div class="clearfix"></div>
+
+    <!-- Guest Section starts -->
+    <div class="date-guest-picker col-sm-12">
+        <div class="datePickerBG datePickerBG-mar-0" ng-show="showGuestPicker"
+             ng-class="{'with-guest-picker-top-0': $root.addGuestPicker === 'room', 'with-full-guest-picker-top-0': $root.addGuestPicker === 'full'}">
+            <div class="row row-guest-picker title-row hidden-xs">
+                <div class="col-sm-2 col-md-1 p-5"></div>
+                <div class="col-sm-2 col-md-2 col-title adults-title">{{'AdultsAge' | translate}}</div>
+                <div class="col-sm-2 col-md-2 col-title children-title">{{'ChildrenAge' | translate}}</div>
+                <div class="col-sm-2 col-md-2 col-title children-title"
+                     ng-show="hotelSearch.passengerInfo[0].childrenAge.length > 0">{{'AgeOfChildren' | translate}}
+                </div>
+            </div>
+
+            <div class="row row-guest-picker" ng-class="{'colxspadding': isMobile}"
+                 ng-repeat="room in hotelSearch.passengerInfo track by $index">
+                <guest-selector is-show-child-title="isShowChildTitle"
+                                passenger-info="room" room-number="$index"
+                                is-last="$last" remove-room="removeRoom()">
+                </guest-selector>
+
+                <p ng-show="$last && !$first" class="add-guest-button remove-guest-button hidden-xs"
+                   ng-click="removeRoom()">
+                    <span class="glyphicon glyphicon-remove-circle"></span>
+                </p>
+            </div>
+            <div class="row row-guest-picker add-guest-row last-row" ng-class="{'colxspadding': isMobile}"
+                 ng-show="hotelSearch.passengerInfo.length < 4">
+                <p class="add-guest-button" ng-click="addRoom()">{{'AddRoom' | translate}} <span
+                        class="glyphicon glyphicon-plus-sign"></span></p>
+            </div>
+
+        </div>
+        <div class="alert " style="background-color:#f05b2b;color:#FFFFFF;" role="alert"
+             ng-show="(isAjaxRoomRates === true && hotellists === false)">
+            No room available
+        </div>
+    </div>
+    <!-- Guest Section ends -->
+</form>
+
+
+
+
+
+

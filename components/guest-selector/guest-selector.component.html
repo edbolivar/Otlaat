@@ -1,0 +1,44 @@
+<div class="col-md-12" ng-show="ctrl.passengerInfo">
+    <div class="col-sm-1 md-1 p-6 room-title ">
+        <span class="title">{{ctrl.roomsTitle[ctrl.roomNumber].text  | translate}}</span>
+        <button ng-if="ctrl.isLast && ctrl.roomNumber !== 0" ng-click="ctrl.removeRoom()" class="hidden-sm remove-guest-button-mobile">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </button>
+    </div>
+    <div class="col-sm-2 col-md-2 datepicker">
+        <span uib-dropdown is-open="ctrl.isOpenAdultDropdown[ctrl.roomNumber]">
+            <button type="button" class="form-control dropdown-btn" uib-dropdown-toggle id="chosen-adults-{{ctrl.roomNumber}}">
+                {{ctrl.chosenAdaults.text}}
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+            <ul class="dropdown-menu" ng-class="{'arabic': $root.lang === 'ar'}" uib-dropdown-menu aria-labelledby="simple-dropdown"
+                set-dropdown-width is-opens="ctrl.isOpenAdultDropdown[ctrl.roomNumber]" dropdown-id="chosen-adults-{{ctrl.roomNumber}}">
+                <li><a href="javascript:void(0)" ng-click="ctrl.changeAdultCount(people)" ng-repeat="people in ctrl.peopleCountArray track by $index">{{people}}</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="col-sm-2 col-md-2 datepicker">
+        <span uib-dropdown is-open="ctrl.isOpenChildDropdown[ctrl.roomNumber]">
+            <button type="button" class="form-control dropdown-btn" id="chosen-child-{{ctrl.roomNumber}}" uib-dropdown-toggle>
+                {{ctrl.chosenChildren.text}}
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+            <ul class="dropdown-menu" ng-class="{'arabic': $root.lang === 'ar'}" uib-dropdown-menu aria-labelledby="simple-dropdown"
+                set-dropdown-width is-opens="ctrl.isOpenChildDropdown[ctrl.roomNumber]" dropdown-id="chosen-child-{{ctrl.roomNumber}}">
+                <li><a href="javascript:void(0)" ng-click="ctrl.changeChildrenCount(children)" ng-repeat="children in ctrl.childrenCountArray track by $index">{{children}}</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="col-sm-2 col-md-1 col-xs-4 datepicker" ng-repeat="child in ctrl.passengerInfo.childrenAge track by $index">
+        <span uib-dropdown is-open="ctrl.isOpenAgeDropdown[ctrl.roomNumber][$index]">
+            <button type="button" id="chosen-age-{{ctrl.roomNumber}}-{{$index}}" class="form-control dropdown-btn small-btn" uib-dropdown-toggle>
+                {{child}}
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+            <ul class="dropdown-menu" ng-class="{'arabic': $root.lang === 'ar'}" uib-dropdown-menu aria-labelledby="simple-dropdown"
+                set-dropdown-width is-opens="ctrl.isOpenAgeDropdown[ctrl.roomNumber][$index]" dropdown-id="chosen-age-{{ctrl.roomNumber}}-{{$index}}">
+                <li><a href="javascript:void(0)" ng-click="ctrl.changeChildAge(item.name, $parent.$index)" ng-repeat="item in (ctrl.childAge | filter: item.search) track by item.id">{{item.name}}</a></li>
+            </ul>
+        </span>
+    </div>
+</div>

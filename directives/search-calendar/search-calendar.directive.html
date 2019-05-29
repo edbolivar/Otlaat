@@ -1,0 +1,42 @@
+<div class="col-sm-2 col-md-2 datepicker mob datepicker-date">
+    <h5>{{'checkIn' | translate}}</h5>
+    <p class="input-group" ng-click="openStartDate($event)">
+        <input type="text" readonly type="text"
+               name="checkin-date"
+               class="form-control calendar-input calendar-select"
+               uib-datepicker-popup="{{format}}"
+               show-weeks="false"
+               ng-model="startDate"
+               is-open="showPopup.openStartDate"
+               datepicker-options="dateOptionsStart"
+               close-text="Close"
+               show-button-bar="false"
+               ng-required="isRequired"
+               ng-change="changeStartDate()"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default calendar-btn calendar-select">
+                <i class="glyphicon glyphicon-calendar calendar-select"></i></button>
+        </span>
+    </p>
+</div>
+
+<div class="col-sm-2 col-md-2 datepicker mob datepicker-date">
+    <h5>{{'checkOut' | translate}}</h5>
+    <p class="input-group" ng-click="openEndDate($event)">
+        <input type="text" readonly class="form-control calendar-input calendar-select"
+               name="checkout-date"
+               uib-datepicker-popup="{{format}}"
+               show-weeks="false"
+               ng-model="endDate"
+               is-open="showPopup.openEndDate"
+               datepicker-options="dateOptionsEnd"
+               ng-required="isRequired && !isOneWay"
+               ng-change="changeEndDate()"
+               close-text="Close"
+               show-button-bar="false"/>
+        <span class="input-group-btn">
+        <button type="button" class="btn btn-default calendar-btn calendar-select"><i
+                class="glyphicon glyphicon-calendar calendar-select"></i></button>
+      </span>
+    </p>
+</div>

@@ -1,0 +1,144 @@
+<div class="PageBG view-booking">
+
+    <div class="container breadcrub">
+        <div>
+            <a class="homebtn" ng-class="{'right': lang === 'ar', 'left': lang !== 'ar'}" href="#"></a>
+            <div ng-class="{'right': lang === 'ar', 'left': lang !== 'ar'}">
+                <ul class="bcrumbs">
+                    <li>/ <a href="#">{{'Booking Details' | translate}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="container not-found" ng-if="mainError">
+        <h2 translate="confirm.noConfirmationFound"></h2>
+    </div>
+
+
+    <div class="container" style="padding-left: 0 !important; padding-right: 0 !important;" ng-if="!mainError">
+
+        <div class="container mt25">
+            <loader center="true" no-js="true" class="internal-filters-loader-container"
+                    ng-if="isFetching">
+                <div class="spinner-container">
+                    <div class="loader">Loading...</div>
+                </div>
+            </loader>
+
+            <div class="col-md-8 pagecontainer transparent margin-top-0">
+
+                <div class="portlet initial-overflow">
+                    <div class="portlet-header collapsebtn2 ng-binding">
+                        <span translate="bookings.yourBookingDetails"></span>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="view-booking__hotel-image-wrapper">
+                            <img ng-src="{{viewBooking.hotelImage}}" class="object-fit-cover" alt="">
+                        </div>
+                        <div class="view-booking__details">
+                            <div class="view-booking__numbers">
+                                <div class="view-booking__otlaat-id"><span
+                                        translate="confirm.otlaatId"></span>: <span
+                                        class="view-booking__id">{{viewBooking.referenceNumber}}</span></div>
+                                <div class="view-booking__confirmation-id"><span
+                                        translate="confirm.confirmationId"></span>: <span
+                                        class="view-booking__id">{{viewBooking.fileNumber}}</span></div>
+                            </div>
+                            <hr>
+
+                            <div class="view-booking__hotel-details">
+                                <div class="view-booking__name">{{viewBooking.hotelName}}</div>
+                                <div class="view-booking__address">{{viewBooking.hotelAddress}}</div>
+                                <div class="view-booking__starts">
+                                    <img ng-if="viewBooking.category.length === 1"
+                                         class="view-booking__stars-image"
+                                         ng-src="{{'css/images/__filter-rating-' + (viewBooking.category) +'.png'}}"
+                                         width="76" alt="">
+                                    <span ng-if="viewBooking.category.length > 1"
+                                          class="category-text">{{viewBooking.category}}</span>
+                                </div>
+                                <div class="view-booking__rating">
+                                    <span>{{viewBooking.rating}}</span>
+                                    <span>{{viewBooking.rating | getRatingText}}</span>
+                                </div>
+                            </div>
+                            <div class="view-booking__dates-price-wrapper">
+                                <div class="view-booking__dates">
+                                    <div class="view-booking__date-from">
+                                        <div translate="checkIn"></div>
+                                        <div class="view-booking__date">{{viewBooking.fromDate}}</div>
+                                    </div>
+                                    <div class="view-booking__date-to">
+                                        <div translate="checkOut"></div>
+                                        <div class="view-booking__date">{{viewBooking.toDate}}</div>
+                                    </div>
+                                </div>
+                                <div class="view-booking__price-container">
+                                    <div class="view-booking__price-title" translate="Price"></div>
+                                    <div class="view-booking__price green"><!--{{ viewBooking.hotelPrice | currencyConverterFilter: viewBooking.otlaat_currency.currencyPrice : viewBooking.otlaat_currency.currency }}-->
+                                    {{viewBooking.currency_code +' '+ viewBooking.payment_customer}}
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div> 
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="portlet initial-overflow" ng-if="hideCancellation">
+                    <div class="portlet-header collapsebtn2 ng-binding">
+                        <span translate="bookings.bookingCancellation"></span>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="view-booking__cancellation-details">
+                            {{viewBooking.cancellation}}
+                        </div>
+                        <div class="view-booking__cancellation-button">
+                            <button class="bookbtn margin-top-20" ng-click="cancelBooking()"
+                                    translate="bookings.cancelBooking"></button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF LEFT CONTENT -->
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-md-4 paymentwrapper view-booking__zero-padding-mobile">
+
+                <div class="portlet margin-bottom-5">
+                    <div class="portlet-body">
+                        <div class="view-booking__action"><a
+                                href="https://www.google.com/maps/?q={{viewBooking.lat}},{{viewBooking.lng}}" target="_blank" translate="confirm.viewOnGoogleMaps"></a></div>
+                        <div ng-if="hideCancellation">        
+                            <div class="view-booking__action"><a ng-click="downloadVoucherInvoice(viewBooking.referenceNumber, 'voucher')" translate="bookings.Download Voucher"></a></div>
+                            <div class="view-booking__action"><a ng-click="downloadVoucherInvoice(viewBooking.referenceNumber, 'invoice')" translate="bookings.Download Invoice"></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portlet">
+                    <div class="portlet-header" translate="confirm.selectedRooms"></div>
+                    <div class="portlet-body">
+                        <div class="payment-rooms">
+                            <div class="payment-room" ng-repeat="room in viewBooking.rooms">
+                                <div class="payment-room__board" ng-bind="room.board"></div>
+                                <div class="payment-room__characteristics" ng-bind="room.characteristics"></div>
+                                <div class="payment-room__adults">
+                                    <i class="icon-user icons" ng-repeat="i in room.adults"></i><span translate="confirm.numberAdults"
+                                translate-value-number="{{room.adults.length}}"></span>
+                                </div>
+                                <hr ng-hide="$last">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF RIGHT CONTENT -->
+
+        </div>
+    </div>
+</div>

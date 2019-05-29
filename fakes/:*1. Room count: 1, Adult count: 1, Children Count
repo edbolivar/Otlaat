@@ -1,0 +1,237 @@
+/*1. Room count: 1, Adult count: 1, Children Count: 0
+---------------------------------------------------------*/
+
+{
+    "success": true,
+    "singleHotelDetailsRes": {
+        "Token": "ee5c9235-e807-47e3-80cf-3e673b7f2df5",
+        "FromDate": "20171004",
+        "ToDate": "20171006",
+        "BreadCrumb": "Qua Hotel",
+        "HotelDetails": {
+            "hotelinfo": {
+                "HotelCode": "428312",
+                "HotelName": "Qua Hotel",
+                "countrySymbol": "TR",
+                "HotelCategory": "5",
+                "Description_EN": "",
+                "Photo": "http://www.adonis.com/HotelSmallPhoto/68243f8d-9851-40d1-a891-fb5c302caffe.jpg,http://www.adonis.com/HotelSmallPhoto/924cf5c0-38fa-4b10-af1d-6fc79373e945.jpg,http://www.adonis.com/HotelSmallPhoto/4f24a2f4-4d07-4829-9be2-3b399324468f.jpg,http://www.adonis.com/HotelSmallPhoto/53b3a94c-8720-4070-9d55-1824f8b284f3.png,http://www.adonis.com/HotelSmallPhoto/5cfc6b2d-6d13-4070-a2af-a6632061625c.png,http://www.adonis.com/HotelSmallPhoto/b5008639-e0af-4165-8a3d-342100e1820a.png,http://www.adonis.com/HotelSmallPhoto/c8832e19-a50f-4a6a-88ce-e0a4893f406b.png,http://www.adonis.com/HotelSmallPhoto/409b91c3-7f0e-47a6-a02d-a460e4f9c648.png,http://www.adonis.com/HotelSmallPhoto/2fa3a8cb-24d5-499b-b440-1b1d231c30f0.jpg,http://www.adonis.com/HotelSmallPhoto/042bde57-7b77-4c6b-9129-acbbc8082c5b.png,http://www.adonis.com/HotelSmallPhoto/63bfea7b-bd50-455f-b527-5aac95900695.png,http://www.adonis.com/HotelSmallPhoto/3db30598-ff46-4e11-be1d-66c5138bc6a6.png,http://www.adonis.com/HotelSmallPhoto/979d4ebe-a580-4541-a959-bfd6958ef642.p",
+                "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+                "rating": 4,
+                "fac_Top": 1,
+                "Amenities": {
+                    "fac_Beachfront": 1,
+                    "fac_FamilyRooms": 0,
+                    "fac_FreeWifi": 0,
+                    "fac_Seaview": 1,
+                    "fac_SPA": 0,
+                    "fac_Pool": 1,
+                    "fac_FitnessCenter": 1,
+                    "fac_Pets": 0,
+                    "fac_Parking": 0,
+                    "fac_Babysitting_Child_Services": 0,
+                    "fac_BreakfastRoom": 1,
+                    "fac_Bar": 0,
+                    "fac_Restaurant": 1,
+                    "fac_DisabledGuests": 0
+                }
+            },
+            "filterinfo": [
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+                        "Name": "Bed and Breakfast"
+                    },
+                    "Price": {
+                        "Amount": "107,27",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "a10da179-7008-4dac-b062-8a25113c43fe",
+                        "Characteristic": "Standard Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "a10da179-7008-4dac-b062-8a25113c43fe|4ba9e39b-51ae-41f9-964b-b94f22b6c643|1|428312",
+                        "AdonisUniqueNumber": "123cbd96-3dcb-4f6e-b698-10ee9f2b1e80",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+                        "Name": "Bed and Breakfast"
+                    },
+                    "Price": {
+                        "Amount": "120,36",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "da8bbcb1-dcf9-4b39-848e-e64a727673fa",
+                        "Characteristic": "Deluxe Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "da8bbcb1-dcf9-4b39-848e-e64a727673fa|4ba9e39b-51ae-41f9-964b-b94f22b6c643|2|428312",
+                        "AdonisUniqueNumber": "64cc0e33-e31f-4d79-80a8-511296636bf9",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+                        "Name": "Bed and Breakfast (NonRefundable)"
+                    },
+                    "Price": {
+                        "Amount": "96,55",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "a10da179-7008-4dac-b062-8a25113c43fe",
+                        "Characteristic": "Standard Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "a10da179-7008-4dac-b062-8a25113c43fe|d951aea7-4252-421e-bc96-b2b2822b8e35|3|428312",
+                        "AdonisUniqueNumber": "d8dc2afb-503b-4cf2-92e4-a8ee4669cec9",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+                        "Name": "Bed and Breakfast (NonRefundable)"
+                    },
+                    "Price": {
+                        "Amount": "108,32",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "da8bbcb1-dcf9-4b39-848e-e64a727673fa",
+                        "Characteristic": "Deluxe Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "da8bbcb1-dcf9-4b39-848e-e64a727673fa|d951aea7-4252-421e-bc96-b2b2822b8e35|4|428312",
+                        "AdonisUniqueNumber": "1809a060-e5a0-4d36-8393-8565240dfa04",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+                        "Name": "Room Only (NonRefundable)"
+                    },
+                    "Price": {
+                        "Amount": "82,42",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "a10da179-7008-4dac-b062-8a25113c43fe",
+                        "Characteristic": "Standard Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "a10da179-7008-4dac-b062-8a25113c43fe|e6c1590d-e486-452c-9fed-21b9a6ce2344|5|428312",
+                        "AdonisUniqueNumber": "c1525841-72dd-4006-8be8-930285d785fd",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+                        "Name": "Room Only (NonRefundable)"
+                    },
+                    "Price": {
+                        "Amount": "94,19",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "da8bbcb1-dcf9-4b39-848e-e64a727673fa",
+                        "Characteristic": "Deluxe Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "da8bbcb1-dcf9-4b39-848e-e64a727673fa|e6c1590d-e486-452c-9fed-21b9a6ce2344|6|428312",
+                        "AdonisUniqueNumber": "a60bbff7-ee2a-4074-82b2-1c08a61db0f6",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+                        "Name": "Room Only"
+                    },
+                    "Price": {
+                        "Amount": "91,58",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "a10da179-7008-4dac-b062-8a25113c43fe",
+                        "Characteristic": "Standard Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "a10da179-7008-4dac-b062-8a25113c43fe|bc7a1316-cae9-4286-996f-7f7e4c64a544|7|428312",
+                        "AdonisUniqueNumber": "3a179256-49a6-43a9-9f2f-c813c9136350",
+                        "XmlServicesType": "One"
+                    }
+                },
+                {
+                    "Occupancy": {
+                        "RoomCount": "1",
+                        "AdultCount": "1",
+                        "ChildCount": "0"
+                    },
+                    "Board": {
+                        "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+                        "Name": "Room Only"
+                    },
+                    "Price": {
+                        "Amount": "104,66",
+                        "Currency": "USD"
+                    },
+                    "RoomType": {
+                        "Code": "da8bbcb1-dcf9-4b39-848e-e64a727673fa",
+                        "Characteristic": "Deluxe Room"
+                    },
+                    "HotelRoomUniqueNumber": {
+                        "XmlServicesUniqueNumber": "da8bbcb1-dcf9-4b39-848e-e64a727673fa|bc7a1316-cae9-4286-996f-7f7e4c64a544|8|428312",
+                        "AdonisUniqueNumber": "a88ebb1f-6972-4c5e-90d1-a008c30372bf",
+                        "XmlServicesType": "One"
+                    }
+                }
+            ]
+        }
+    }
+}
+
+

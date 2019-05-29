@@ -1,0 +1,110 @@
+<div class="main-page-slider hidden-xs" ng-class="{'zero-opacity': !loaded}">
+	<div ng-include="'templates/homeslider.html'" onload="loaded = true"></div>
+</div>
+<div class="datePickerWrapper home-page" >
+	<!-- changes made by Mir Ali -->
+	<div class="search-panel-wrapper">
+		<search-panel></search-panel>
+	</div>
+
+</div>
+
+<div class="latestNews">
+	<div class="container lnews">{{'LastMinuteOffer' | translate}}</div>
+	
+	<div class="container">
+		<!--row 1-->
+		<div class="row">
+			<div ng-repeat="homes in homesTop">
+				<!-- first image of top starts-->
+				<div ng-if="$index === 0" class="col-md-6"> 
+					<div class="msbox1" ng-click="goToHotelDetails(homes)">
+						<!--<a href="javascript:void(0);">-->
+							<div class="af-mosaic-content-bottom-right">
+		                		<h4 class="af-mosaic-item-title">{{ homes.image_city }}</h4>
+		                		<span class="af-mosaic-item-text">{{ homes.image_country }}</span>
+		            		</div>
+							<div class="specialoffer"></div>
+		            	<img src="./public/images/{{ homes.image }}" class="fhimg1" alt="Image">
+							<!--<img src="./public/images/1525347539.jpg" class="fhimg1" alt="Image">-->
+		            	<!--</a>-->
+						<p class="msctext padding20">
+							<span class="newstitle"><a href="#">{{ homes.title }}</a></span>
+							<br><br>
+							<span>{{ homes.description }}</span>
+						</p>
+					</div>
+				</div>
+				<!-- first image of top ends-->
+				<div ng-if="$index === 1 || $index === 2" class="col-md-3">
+					<div class="msbox2" ng-click="goToHotelDetails(homes)">
+						<!--<a href="javascript:void(0);">-->
+							<div class="af-mosaic-content-bottom-right">
+					    		<h4 class="af-mosaic-item-title">{{ homes.image_city }}</h4>
+					    		<span class="af-mosaic-item-text">{{ homes.image_country }}</span>
+							</div>
+							<!--<img src="../public/images/{{ homes.image }}" class="fhimg2" alt="Image"></a>-->
+							<img src="./public/images/{{ homes.image }}" class="fhimg2" alt="Image">
+							<!--</a>   -->
+						<p class="msctext padding20">
+							<span class="newstitle"><a href="#">{{ homes.title }}</a></span>
+							<br><br>
+							<span>{{ homes.description }}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--row 1-->
+
+
+		<!--row 2-->
+		<div class="row"> 
+			<div class="col-md-6" ng-repeat="homes in homesTop" ng-if="$index === 3 || $index === 4">
+				<div class="msbox" ng-click="goToHotelDetails(homes)">
+					<div class="w50percent msctext padding20 left">
+						<span class="newstitle"><a href="#">{{ homes.title }}</a></span><br><br>
+						<span>{{ homes.description }}</span>
+					</div>		
+					<div class="w50percentlast right">
+						<a href="javascript:void(0);">
+							<div class="af-mosaic-content-bottom-right">
+                    			<h4 class="af-mosaic-item-title">{{ homes.image_city }}</h4>
+                    			<span class="af-mosaic-item-text">{{ homes.image_country }}</span>
+                			</div>
+                		<!--<img src="../public/images/{{ homes.image }}" class="fwimg3" alt="Image"></a>-->
+						<img src="./public/images/{{ homes.image }}" class="fwimg3" alt="Image"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--row 2-->
+
+
+		<!--row 3-->
+		<div class="row">
+			<div class="col-md-3" ng-repeat="homes in homesTop" ng-if="$index === 5 || $index === 6 || $index === 7 || $index === 8">
+				<div class="msbox2" ng-click="goToHotelDetails(homes)">
+					<a href="javascript:void(0);">
+						<div class="af-mosaic-content-bottom-right">
+	                    	<h4 class="af-mosaic-item-title">{{ homes.image_city }}</h4>
+	                    	<span class="af-mosaic-item-text">{{ homes.image_country }}</span>
+	                	</div>
+						<img src="./public/images/{{ homes.image }}" class="fhimg4" alt="Image">
+                        <!--<img src="../public/images/{{ homes.image }}" class="fhimg4" alt="Image">-->
+	                </a>
+					<p class="msctext padding20">
+						<span class="newstitle"><a href="#">{{ homes.title }}</a></span>
+						<!--<span><img ng-src="{{'css/images/filter-rating-' + (homes.category) + '.png'}}" alt="Stars" width="76"/></span>-->
+
+						<br><br>
+						<span>{{ homes.description }}</span>
+					</p>
+				</div>
+			</div>	
+
+		</div>
+		<!--row 3-->
+
+	</div><!--container-->

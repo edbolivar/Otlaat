@@ -1,0 +1,1417 @@
+{
+  "success": true,
+  "searchHotelFilterRes": {
+    "HotelDetails": [
+      {
+        "hotelinfo": {
+          "HotelCode": "430363",
+          "HotelName": "Ibis Istanbul Zeytinburnu",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "In Istanbul this hotel is only 4 km from the Galleria Atak246y and is 6.4 km from Ataturk Airport. It has air-conditioned guest rooms with free Wi-Fi and provides free private parking.Ibis Istanbul rooms include modern furnishings and private bathrooms with a hairdryer. They come equipped with a coffee maker and a flat-screen TV with satellite channels. Smoking rooms are also available.The buffet breakfast combines all the elements of a traditional continental breakfast. The Wok and Co restaurant has a terrace and serves Asian and Italian cuisine. Guests can choose their own ingredients and watch as the meal is prepared. The Ibis also has a bar that serves refreshing beverages.Guests can enjoy the hotel",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/f4a03da7-51fc-4145-927f-7c14424ad505.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "92.88",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "119.41",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "232.19",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "86.24",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "112.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "225.56",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "5245",
+          "HotelName": "Grand Zentrum Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "Located in the heart of the city Grand Zentrum Hotel is just 100 metres from Taksim Square. The hotel offers 24-hour front desk service and air-conditioned rooms with free Wi-Fi. The rooms of Hotel Grand Zentrum have an authentic d233cor combining modern style with Ottoman. All rooms include a flat-screen TV with satellite channels safe box and a minibar. The private bathrooms come with a shower or a bath tub and free toiletries. Some rooms also offer a spa bath and a city-view balcony.ampnbspThe day starts with an open buffet breakfast at Grand Zentrum Hotel. The 224 la carte restaurant serves a rich menu of Europen cuisine and Turkish dishes. You can enjoy your meals on the terrace with views of the city and Bosphorus during summer season.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/634f9b08-8e4b-4ade-adb9-69e871e1598f.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "112.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "99.51",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "423335",
+          "HotelName": "Zeynep Sultan Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/693108bf-ecc3-4457-9a8d-c6802163b62f.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "56.39",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "62.63",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "40159",
+          "HotelName": "Golden Horn Istanbul",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "Located in a prime location by Istanbuls Golden Horn this city hotel is ideally placed for visiting the attractions of the Sultanahmet district which can all be reached on foot within a few minutes. A rooftop terrace restaurant affords magnificent views over the Golden Horn and historical buildings of the area. Public transport and the Sirkeci train station are both nearby while the Galata Bridge crossing the Golden Horn is only a 10-minute walk away.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/52aa4c82-0db2-4f88-8d6f-b17028b76fd0.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "53.74",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "47.77",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "59.71",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "53.07",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "187363",
+          "HotelName": "Star Holiday Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "In Istanbul",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/5b7dd72a-20dd-4e04-90bf-fbac81717d40.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "66.34",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "53.07",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "45972",
+          "HotelName": "Prestige Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "This hotel is located in Laleli close to public transport links some 20 m and in the heart of the old shopping centre where there are many textile and leather goods shops still to be found. The centre of Laleli is just 100 m away and it is around 1 km to the shops at Beyazit and some 1.1 km to the Marmaris Sea. The Spice Bazaar and the nearest restaurants and bars are about 1.5 km and the sightseeing attractions of Sultanahmet such as the Blue Mosque the Topkapi Palace and the Hagia Sophia are less than 2 km away. Guests will find Sirkeci railway station 2 km away and Taksim Square is approximately 4 km from the hotel. The nightspots of Beyolu are only around a 30-minute journey on public transport. Istanbul Atat",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/24d5b09f-e00d-4030-9e01-275310cb938a.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "59.71",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "47.77",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "263913",
+          "HotelName": "Inncity Hotel Nisantasi",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "",
+          "Photo": null,
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "72.97",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "59.71",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "165.85",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "348368",
+          "HotelName": "Jazz Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "This hotel offers deluxe rooms with a Jazz theme and flat-screen TV with multilingual satellite channels. It is less than a 5 minute walk from Osmanbey Metro station.Each room at Jazz Hotel has a unique d233cor featuring beige color tones and hardwood floors. Each soundproof room is themed after famous Jazz musicians whose music is featured in the hotel",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/1c48b877-52bb-4ddb-9094-89c23ea0628a.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "118.22",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "144.62",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "131.35",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "264177",
+          "HotelName": "Sultanahmet Park",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/4a75746b-2290-485b-9d9b-dcc39c9a638c.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "56.39",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "112.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "89.10",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "112.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "28.19",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "56.39",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "44.55",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "56.39",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "423998",
+          "HotelName": "Taksim Star Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/9ccef0c4-33d0-4d12-aa32-3470b3d20dd2.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "318.44",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "112.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "212.29",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "298.53",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "103.49",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "199.02",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "88.90",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "106.15",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "79.61",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "96.86",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "69272",
+          "HotelName": "Hotel Buyuk Keban",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "B252y252k Keban is quietly situated next to Istanbul University yet close to the vibrant Grand Bazaar. It features an in-house health club with gym traditional hammam hot tub and massage facilities. Recently refurbished rooms at Hotel B252y252k Keban have wooden floors. They are air conditioned and spacious enough to include a seating area with flat-screen satellite TVs. A buffet breakfast is served at the restaurant of the hotel while drinks are offered in the on-site bar and TV lounge. Wi-Fi is free throughout.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/4d44ba86-b96b-4b07-8343-2ba5f64a6b1b.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "56.12",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "62.36",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "72518",
+          "HotelName": "Valide",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "Situated in Osmanbey the commercial centre of Istanbul the hotel",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/ffbb8638-3aaf-4ce1-bf70-4b52da1cfa92.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "c7613c99-6aa9-4194-9d1b-5af87c6d2e5f",
+              "Name": "Full Board"
+            },
+            "Price": {
+              "Amount": "77.00",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "55.00",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "74494",
+          "HotelName": "Green Anka",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "This modern and elegant hotel is situated in the area of Findikzade close to the historic Sultanahmet District the historic centre of Istanbul. It features a restaurant a bar and a business centre. Public transportation links are in the vicinity of the hotel famous attractions such as the Grand Bazaar Blue Mosque Hagia Sophia Hippodrome or Topkapi Palace are within easy reach.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/0e46e363-77c1-4998-adb6-e665497fe3da.png",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "53.74",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "59.71",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "79603",
+          "HotelName": "BC Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "BC Hotel offers affordable rooms in the heart of Istanbul",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/69cb56ae-3f09-4508-8bf4-6cce31bf43c7.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "119.41",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "185.75",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "83519",
+          "HotelName": "Arena Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "With its central location just a stones throw from the Blue Mosque on the historical and cultural peninsula of Istanbul this attractive hotel provides the ideal base from which to explore the thriving ancient city on foot. Each of the 27 elegant rooms is uniquely and lavishly decorated with rich fabrics hardwood floors and handmade rugs. Attentive concierge staff are happy to help make reservations travel plans and sightseeing plans 247 and the hotel offers a wide range of facilities and services including a meeting room for business classic Turkish baths marbling art classes with a professional artist airport transfers free breakfast buffet and free WIFI throughout the hotel. The hotel restaurant provides authentic Turkish buffet-style meals with a variety of mezzes vegetarian and fish options daily as well as organic options upon request and also offers cooking classes.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/a64452cb-db5a-47a9-8147-a0ea83ff96b4.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "54.40",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "54.40",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "65.01",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "65.01",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "61.03",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "bc7a1316-cae9-4286-996f-7f7e4c64a544",
+              "Name": "Room Only"
+            },
+            "Price": {
+              "Amount": "61.03",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "58.38",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "58.38",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "423169",
+          "HotelName": "By Murat Crown",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "By Murat Crown Hotel Taksim is only a 2-minute walk from lively Istiklal Street which houses many restaurants cafes eateries bars and shopping malls while Historical Tunnel Metro is 3-minute walk from the property. By Murat Crown Hotel Taksim has air-conditioned units with an elegant d233cor.Each unit here will provide you free WiFi access flat-screen satellite TV electric kettle tea ampamp coffee set-up and a minibar. Featuring a shower private bathroom also comes with a hairdryer and bathrobes. You can enjoy city view from the room.At By Murat Crown Hotel Taksim you will find a 24-hour front desk providing room and concierge services. Dry cleaning and ironing services can also be offered upon request at an additional charge. You can benefit from free WiFi in public areas.Daily breakfast is served in open buffet style at the lobby. You can enjoy lunch and dinner at a restaurant nearby.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/820a4137-2f86-46c3-b841-22c565f99574.png",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "99.51",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "110.13",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "84.58",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "93.61",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "93517",
+          "HotelName": "Laleli Gonen",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "This welcoming city hotel is situated in Istanbuls city centre right next to Istanbul Universitys main campus and near many public transport links making it easy to explore this ancient city and all its cultural and historical attractions. Attentive and friendly staff are happy to arrange tickets to local events or help plan urban excursions and the hotel also offers a car rental service and airport shuttle. The hotels smart-casual restaurant serves traditional Turkish cuisine and vegetarian dishes and guests can enjoy a nice Turkish coffee or raki in the lobby bar after a busy day of sightseeing. Guests may sunbathe by the pool and take in impressive city views from the rooftop terrace while those who like to keep up with current events or football will appreciate the hotels caf",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/9869533a-b4aa-4e83-9176-83657ef09f52.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "47.77",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "e6c1590d-e486-452c-9fed-21b9a6ce2344",
+              "Name": "Room Only (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "43.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "84.92",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "424590",
+          "HotelName": "Golden Crown Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "Hoteldescription Built in2003 this hotel consists of 35 rooms. There is a lobby with a 24-hourreception ampnbspa currency exchange and alift. Additional facilities include a bar a TV room an air-conditioned buffetand 224 la carte restaurant and public Internet access. There are room andlaundry services as well as medical assistance should they be required.ampnbsp",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/b2e8c0d1-c8f1-4c72-ba73-3798573d150f.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "184.59",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "51.92",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "64.09",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "169.82",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "47.77",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "58.96",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "110877",
+          "HotelName": "Hotel Evsen",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "This modern hotel enjoys a convenient location in the old city in the Eminonu-Istanbul district. The hotel is a mere 15 minutes walking distance away from the Hippodrome of Constantinople and Sultanahmet making it the ideal choice for travellers who are eager to explore the delights this intriguing city has to offer. Guests will find themselves within easy access of the local public transport network which places other areas of the city within convenient reach. This cosy city hotel comprises 26 charming rooms where guests can relax and unwind in comfort at the end of the day. The rooms come well equipped with modern amenities for visitors convenience. Guests are invited to enjoy a delicious buffet breakfast which is sure to set themselves up for the day.",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/f0cbdae7-1863-495f-9fef-f0f6ae0af33f.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "132.68",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "126.05",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "112.78",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "118.75",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "113.44",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "100.84",
+              "Currency": "USD"
+            }
+          }
+        ]
+      },
+      {
+        "hotelinfo": {
+          "HotelCode": "145611",
+          "HotelName": "Wame Suite Hotel",
+          "countrySymbol": "TR",
+          "HotelCategory": "3",
+          "Description_EN": "If you would like your accommodations in Istanbul to be walking distance to centers of entertainment culture art business shopping and conventionsampnbspWame Suite Hotelampnbspshould be your choice.We offer 10 deluxe 5 single 5 suite rooms and one penthouse suite all with chic and modern d233cor very spacious accommodations.Wame Suite Hotelampnbspwill provide you the peace of mind comfort and reliability you would find at your own home.ampnbspOur suite hotel is at the center of Istanbul",
+          "Photo": "http:\/\/www.adonis.com\/HotelSmallPhoto\/7bfe1693-f578-4ed2-a6a4-141acace6014.jpg",
+          "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+          "rating": 4,
+          "fac_Top": 1,
+          "Amenities": {
+            "fac_Beachfront": 1,
+            "fac_FamilyRooms": 0,
+            "fac_FreeWifi": 0,
+            "fac_Seaview": 1,
+            "fac_SPA": 0,
+            "fac_Pool": 1,
+            "fac_FitnessCenter": 1,
+            "fac_Pets": 0,
+            "fac_Parking": 0,
+            "fac_Babysitting_Child_Services": 0,
+            "fac_BreakfastRoom": 1,
+            "fac_Bar": 0,
+            "fac_Restaurant": 1,
+            "fac_DisabledGuests": 0
+          }
+        },
+        "filterinfo": [
+          {
+            "Board": {
+              "Code": "4ba9e39b-51ae-41f9-964b-b94f22b6c643",
+              "Name": "Bed and Breakfast"
+            },
+            "Price": {
+              "Amount": "55.73",
+              "Currency": "USD"
+            }
+          },
+          {
+            "Board": {
+              "Code": "d951aea7-4252-421e-bc96-b2b2822b8e35",
+              "Name": "Bed and Breakfast (NonRefundable)"
+            },
+            "Price": {
+              "Amount": "50.15",
+              "Currency": "USD"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

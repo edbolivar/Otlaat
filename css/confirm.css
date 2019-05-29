@@ -1,0 +1,22 @@
+.confirmation-page__download {
+    color: #0b6c8d;
+    cursor: pointer;
+}
+
+.confirmation-page__download:last-of-type {
+    padding-left: 40px;
+}
+
+.confirmation-page__download i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.confirmation-page__download__text {
+    display: inline-block;
+}
+
+.confirmation-page__support-text {
+    color: grey;
+    font-size: 12px;
+}

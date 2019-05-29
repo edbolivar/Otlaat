@@ -1,0 +1,89 @@
+.bookings {
+    padding-bottom: 50px;
+}
+
+.bookings dir-pagination-controls {
+    float: right;
+    margin-top: 25px;
+}
+
+.bookings__filter {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.bookings__filter a {
+    padding: 6px 12px;
+}
+
+.bookings__filter .btn, .bookings__filter .btn:focus, .bookings__filter .btn:active {
+    background-color: #f8633b;
+    border: solid 1px #da7c0c;
+    border-radius: 1px;
+}
+
+.bookings__filter .btn:hover {
+    background: #e2532d;
+    border: solid 1px #da7c0c;
+}
+
+.bookings__element {
+    height: 75px;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.bookings-header {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: grey;
+    padding-top: 10px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+}
+
+.bookings-header__element {
+    width: 24%;
+}
+
+.bookings__element-container {
+    margin-top: -14px;
+}
+
+.bookings__element__detail {
+    /*display: inline-block;*/
+    width: 24%;
+    /*line-height: 75px;*/
+}
+
+.bookings__element__detail-name {
+    font-weight: bold;
+}
+
+.bookings__element__detail-date {
+    color: #b3b3b3;
+    text-align: center;
+}
+
+.bookings__element__detail-download {
+    text-align: right;
+}
+
+.bookings__element__detail-download-wrapper .bookings__element__detail-download {
+    display: inline-block;
+}
+
+.bookings__element__detail-download i {
+    cursor: pointer;
+    font-size: 18px;
+    color: #076b8c;
+}
+
+.bookings .no-filter-results{
+    margin-top: 0px;
+}

@@ -1,0 +1,411 @@
+<div class="PageBG payment"> 
+
+    <loader class="internal-filters-loader-container" ng-if="payNowFetching">
+        <div class="spinner-container">
+            <div class="loader">Loading...</div>
+        </div>
+    </loader>
+
+    <div class="container breadcrub">
+        <div>
+            <a class="homebtn" ng-class="{'right': lang === 'ar', 'left': lang !== 'ar'}"  href="#"></a>
+            <div ng-class="{'right': lang === 'ar', 'left': lang !== 'ar'}">
+                <ul class="bcrumbs"
+                    ng-class="{'arabic-breadcrumbs': lang === 'ar'}">
+                    <li> / <a href="#">{{'Hotels' | translate}}</a></li>
+                    <li> / <a href="#">{{'HotelName' | translate}}</a></li>
+                    <li> / <a href="#" class="active">{{'Payment' | translate}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="container" style="padding-left: 0px !important; padding-right: 0px !important; min-height: 500px;">
+
+        <div class="col-md-6 col-md-offset-3 text-center" ng-if="errors" style="margin-top: 100px;">
+            <div role="alert" id="reg_msg" class="alert alert-danger">
+                <span ng-repeat="(key, error) in errors">{{ 'errors.'+error | translate}}<br></span>
+            </div>
+        </div>
+
+        <div class="margin-top-20" ng-show="!errors">
+
+
+            <!-- LEFT CONTENT -->
+            <div class="col-md-8">
+
+                <div class="rooms-portlet-mobile" ng-include="roomsPortlet"></div>
+
+                <div class="portlet initial-overflow">
+                    <div class="portlet-header collapsebtn2">{{'hotelDetails.cancellationPolicy' | translate}}</div>
+                    <div class="portlet-body">
+                        <div class="payment__guests-room marginTop15" ng-repeat="policy in  payment.cancellationPolicy">
+                            <div class="payment__guests-room-board">{{policy.roomName | translate}}</div>
+                            <!--<div class="payment__guests-room-characteristics">{{policy.cancellationMessage}}</div>-->
+                            <div class="payment__guests-room-characteristics" ng-bind-html="policy
+                                .cancellationMessage"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portlet initial-overflow" ng-if="payment.hotel.remark!=''">
+                    <div class="portlet-header collapsebtn2">{{'hotelDetails.remark' | translate}}</div>
+                    <div class="portlet-body">
+                        <div class="payment__guests-room marginTop15">
+                            <div class="payment__guests-room-characteristics">{{payment.hotel.remark}}</div>
+                        </div> 
+
+                    </div>
+                </div>
+
+                <div class="portlet initial-overflow" ng-show="!payment.contactDetailsHidden">
+                    <div class="collapsebtn2 portlet-header">
+                        {{'payment.contactDetails' | translate}}
+                    </div>
+                    <div class="portlet-body" style="position: relative">
+                        <form name="profileForm">
+                            <loader class="internal-filters-loader-container" no-js="true" ng-if="isFetching">
+                                <div class="spinner-container">
+                                    <div class="loader">Loading...</div>
+                                </div>
+                            </loader>
+                            <div class="row">
+                                <div class="col-md-12 payment__help-text">
+                                    <span class="size16px grey left margin-bottom-15">{{'WhoCheckIn' | translate}}</span>
+                                </div>
+                            </div>
+
+                            <div class="padding10">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-2 padding-right-0">
+                                        <div class="marginTop5"><span class="dark">{{'payment.fullName' | translate}}:</span><span
+                                                class="red">*</span></div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 form-group"  ng-class="{'has-error': profileForm.name.$touched && profileForm.name.$dirty && profileForm.name.$invalid}">
+                                        <input type="text" class="form-control input-md"
+                                               name="name"
+                                               ng-pattern="/^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FFa-zA-Z ]+[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FFa-zA-Z-_ ]*$/"
+                                               ng-required="true" ng-minlength="3"
+                                               english-only="true"
+                                               ng-model="payment.user.firstName"
+                                               ng-blur="payment.mainUser.firstName = payment.user.firstName"
+                                               placeholder="{{'payment.firstName' | translate}}">
+                                        <span ng-show="profileForm.name.$touched && profileForm.name.$dirty && profileForm.name.$invalid">
+                                                <span ng-show="profileForm.name.$error.required" translate="errors.nameRequired"></span>
+                                                <span ng-show="profileForm.name.$error.minlength" translate="errors.minLength3"></span>
+                                                <span ng-show="profileForm.name.$error.pattern" translate="errors.validName"></span>
+                                            </span>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 form-group" ng-class="{'has-error': profileForm.last_name.$touched && profileForm.last_name.$dirty && profileForm.last_name.$invalid}">
+                                        <input type="text" name="last_name"
+                                               ng-minlength="3" ng-required="true"
+                                               english-only="true"
+                                               ng-blur="payment.mainUser.lastName = payment.user.lastName"
+                                               ng-model="payment.user.lastName"
+                                               class="form-control input-md" placeholder="{{'payment.lastName' | translate}}">
+                                        <span ng-show="profileForm.last_name.$touched && profileForm.last_name.$dirty && profileForm.last_name.$invalid">
+                                                <span ng-show="profileForm.last_name.$error.required" translate="errors.usernameRequired"></span>
+                                                <span ng-show="profileForm.last_name.$error.minlength" translate="errors.minLength3"></span>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="row marginTop5">
+                                    <div class="col-sm-4 col-md-2 padding-right-0">
+                                        <div class="marginTop5"><span class="dark">{{'payment.contactDetails' | translate}}:</span><span
+                                                class="red">*</span></div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 form-group payment-phone"
+                                         ng-class="{'has-error': (profileForm.phone.$touched && profileForm.phone.$dirty && profileForm.phone.$invalid) || numberOnly}">
+                                        <input style="padding-left: 50px;" id="phone" name="phone" placeholder="Phone Number" class="form-control input-md"
+                                               ng-model="payment.user.phone_number"
+                                               numbers-only
+                                               ng-pattern="/^[0-9]+$/"
+                                               ng-required="true">
+                                        <div style="color:red"
+                                                ng-show="profileForm.phone.$touched && profileForm.phone.$dirty && profileForm.phone.$invalid">
+                                            <div ng-show="profileForm.phone.$error.required"
+                                               translate="errors.phoneRequired"></div>
+                                            <div ng-show="profileForm.phone.$error.pattern"
+                                                  translate="errors.validPhone"></div>
+                                            <div ng-show="profileForm.phone.$error.parse"
+                                                 translate="errors.phoneRequired"></div>
+                                        </div>
+                                        <div style="color:red" ng-show="numberOnly"
+                                              translate="errors.digitsOnly"></div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 form-group"
+                                         ng-class="{'has-error': profileForm.login_email.$touched && profileForm.login_email.$dirty && profileForm.login_email.$invalid}">
+                                        <input type="text" class="form-control input-md"
+                                               ng-pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"
+                                               ng-required="true"
+                                               ng-model="payment.user.email"
+                                               name="login_email" placeholder="{{'EmailAddress' | translate}}">
+                                        <span style="color:red"
+                                              ng-show="profileForm.login_email.$touched && profileForm.login_email.$dirty && profileForm.login_email.$invalid">
+                                                <span ng-show="profileForm.login_email.$error.required" translate="errors.emailRequired"></span>
+                                                <span ng-show="profileForm.login_email.$error.pattern" translate="errors.invalidEmail"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row marginTop5" ng-if="showPassword">
+                                    <div class="col-sm-4 col-md-2 padding-right-0">
+                                        <div class="marginTop5" style="margin-top: 23px;"><span class="dark">{{'global.password' | translate}}:</span></div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <span class="size12 grey">{{'payment.optional' | translate}}</span>
+                                        <input type="password" class="form-control input-md" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="portlet">
+                    <div class="collapsebtn2 portlet-header">
+                        {{'payment.guests' | translate}}
+                    </div>
+                    <div class="portlet-body">
+                        <form name="mainGuestForm">
+                            <div class="payment__guests">
+                                <div class="payment-room__board" ng-bind="payment.rooms[0].board | translate"></div>
+                                <div class="payment-room__characteristics rtlclsnew" ng-bind="payment.rooms[0].characteristics | translate"></div>
+
+                                <hr>
+
+                                <div class="row">
+                                    <div class="col-md-12 payment__help-text">
+                                        <span class="size16px grey left margin-bottom-15">{{'payment.mainGuestInfo' | translate}} (Enter name in english only)</span>
+                                    </div>
+                                </div>
+
+                                <div class="padding10">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-2 padding-right-0">
+                                            <div class="marginTop5"><span class="dark">{{'payment.mainGuest' | translate}}:</span><span
+                                                    class="red">*</span></div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <input type="text" class="form-control input-md"
+                                                   name="mainGuestFN"
+                                                   ng-minlength="3"
+                                                   ng-required="true"
+                                                   english-only="true"
+                                                   ng-model="payment.mainUser.firstName"
+                                                   placeholder="{{'payment.firstName' | translate}}">
+                                            <span ng-show="mainGuestForm.mainGuestFN.$touched && mainGuestForm.mainGuestFN.$dirty && mainGuestForm.mainGuestFN.$invalid">
+                                                <span ng-show="mainGuestForm.mainGuestFN.$error.required" translate="errors.nameRequired"></span>
+                                                <span ng-show="mainGuestForm.mainGuestFN.$error.minlength" translate="errors.minLength3"></span>
+                                                <span ng-show="mainGuestForm.mainGuestFN.$error.pattern" translate="errors.validName"></span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <input type="text" class="form-control input-md"
+                                                   name="mainGuestLN"
+                                                   english-only="true"
+                                                   ng-minlength="3"
+                                                   ng-required="true"
+                                                   ng-model="payment.mainUser.lastName"
+                                                   placeholder="{{'payment.lastName' | translate}}">
+                                            <span ng-show="mainGuestForm.mainGuestLN.$touched && profileForm.mainGuestLN.$dirty && profileForm.mainGuestLN.$invalid">
+                                                <span ng-show="mainGuestForm.mainGuestLN.$error.required" translate="errors.usernameRequired"></span>
+                                                <span ng-show="mainGuestForm.mainGuestLN.$error.minlength" translate="errors.minLength3"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="portlet" ng-if="guests.length">
+                    <div class="collapsebtn2 portlet-header cursor-pointer noselect"
+                         ng-click="portletShown = !portletShown">
+                        <span class="glyphicon glyphicon-minus" aria-hidden="true" ng-show="portletShown"></span>
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true" ng-hide="portletShown"></span>
+                        {{'payment.additionalGuests' | translate}}
+                        <small translate="payment.optional"></small>
+                    </div>
+                    <div class="portlet-body" ng-show="portletShown">
+                        <div class="row">
+                            <div class="col-md-12 payment__help-text">
+                                <span class="size16px grey left margin-bottom-15">{{'payment.enterOthers' | translate}}</span>
+                            </div>
+                        </div>
+
+                        <div class="row marginTop15" ng-repeat="guest in guests">
+                            <div class="padding10">
+                                <div class="col-sm-4 col-md-2 padding-right-0">
+                                    <div class="marginTop5"><span class="dark">{{'payment.guest' | translate}} {{$index+2}}:</span></div>
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <input type="text" class="form-control input-md" ng-model="guest.firstName" placeholder="{{'payment.firstName' | translate}}">
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <input type="text" class="form-control input-md" ng-model="guest.lastName" placeholder="{{'payment.lastName' | translate}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row marginTop15" ng-repeat="guestsChild in guestsChilds">
+                            <div class="padding10">
+                                <div class="col-sm-4 col-md-2 padding-right-0">
+                                    <div class="marginTop5"><span class="dark">{{'payment.guestsChild' | translate}} {{$index+1}}:</span></div>
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <input type="text" class="form-control input-md" ng-model="guestsChild.firstName" placeholder="{{'payment.firstName' | translate}}">
+                                </div>
+                                <div class="col-sm-4 col-md-4">
+                                    <input type="text" class="form-control input-md" ng-model="guestsChild.lastName" placeholder="{{'payment.lastName' | translate}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portlet">
+                    <div class="collapsebtn2 portlet-header">
+                        {{'payment.paymentMethod' | translate}}
+                    </div>
+                    <div class="portlet-body">
+                        <div class="row">
+                            <div class="col-md-12 payment__help-text">
+                                <span class="size16px grey left margin-bottom-15">{{'payment.choosePayment' | translate}}</span>
+                            </div>
+                        </div>
+
+                        <div class="padding10">
+                            <div class="row payment__methods">
+                                <div class="col-lg-12">
+                                    <div class="payment__methods-container">
+                                        <div class="radio">
+                                            <label class="paypal-radio-image">
+                                                <input type="radio"
+                                                       ng-model="payment.paymentMethod"
+                                                       value="paypal" name="optradio" />
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="checkout-radio-image">
+                                                <input type="radio"
+                                                       ng-model="payment.paymentMethod"
+                                                       value="checkout" name="optradio" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <style>
+                                .bookbtn-container.checkout .bookbtn.checkoutbtn {
+                                    display: block;
+                                }
+
+                                .bookbtn-container.checkout .bookbtn.paypalbtn {
+                                    display: none;
+                                }
+
+                                .bookbtn-container.paypal .bookbtn.paypalbtn {
+                                    display: block;
+                                }
+
+                                .bookbtn-container.paypal .bookbtn.checkoutbtn {
+                                    display: none;
+                                }
+                            </style>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="bookbtn-container pull-right"
+                                         ng-class="{'paypal': payment.paymentMethod === 'paypal',
+                                         'checkout': payment.paymentMethod === 'checkout'}">
+                                        <button class="bookbtn checkoutbtn" id="payBtnCheckoutBtn"
+                                                type="button"
+                                                ng-disabled="profileForm.$invalid || mainGuestForm.$invalid"
+                                                translate="payment.proceedCheckout">
+                                        </button>
+                                        <button class="bookbtn paypalbtn" type="button"
+                                                ng-click="payNow();" ng-disabled="profileForm.$invalid || mainGuestForm.$invalid"
+                                                translate="payment.proceedPaypal">
+                                        </button>
+                                    </div>
+                                    <!--<button type="submit" class="bluebtn margtop20">{{'CompleteBookingButton' | translate}}</button>-->
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF LEFT CONTENT -->
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-md-4 paymentwrapper payment__hotel-details">
+                <div class="rooms-portlet-desktop" ng-include="roomsPortlet"></div>
+
+                <div class="pagecontainer2 needassistancebox" style="margin: 0px !important; padding-top: 10px">
+                    <div class="cpadding1">
+                        <span class="icon-help"></span>
+                        <h3 class="opensans" style="text-align: left;">{{'NeedAssistance' | translate}}</h3>
+                        <p class="size14 grey">{{'NeedAssistDesc' | translate}}</p>
+                        <p class="opensans size30 lblue xslim">1-866-599-6674</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <!-- END OF RIGHT CONTENT -->
+
+
+        </div>
+    </div>
+</div>
+<!-- Paypal Form starts-->
+<form ng-if="payment.paymentMethod === 'paypal'" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank" name="paypalfrm" id="paypalfrm">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="asish111@gmail.com">
+    <input type="hidden" name="item_name" id="item_name" value="">
+    <input type="hidden" name="item_number" id="item_number" value="">
+    <input type="hidden" name="amount" id="amount" value="">
+    <input type="hidden" name="custom" id="custom" value="">
+    <input type="hidden" name="invoice" id="invoice" value="">
+    <!--<input type="hidden" name="currency_code" id="currency_code" value="USD"> Paypal not allowing to  take currency_code-->
+    <input type='hidden' name='success_return' value='https://www.otlaat.com/hotels/successPaypal'>
+    <!--<input type='hidden' name='cancel_return' id='cancel_return' value=''>-->
+</form>
+<!--
+<form ng-if="payment.paymentMethod === 'paypal'" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" name="paypalfrm" id="paypalfrm">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="otlaat@adintop.com">
+    <input type="hidden" name="item_name" id="item_name" value="">
+    <input type="hidden" name="item_number" id="item_number" value="">
+    <input type="hidden" name="amount" id="amount" value="">
+    <input type="hidden" name="custom" id="custom" value="">
+    <input type="hidden" name="invoice" id="invoice" value="">
+    <input type="hidden" name="currency_code" id="currency_code" value="USD">
+    <input type='hidden' name='success_return' value='https://www.otlaat.com/hotels/successPaypal'>
+    <!--<input type='hidden' name='cancel_return' id='cancel_return' value=''>-->
+<!--</form>-->
+
+<form name="myCCForm" method="post" id="myCCForm" action="" >
+    <input id ="token" name ="token" type="hidden"  value=""/>
+    <input id="itemNumber" name="itemNumber" type="hidden" value="">
+    <input id="payment_adonis" name="payment_adonis" type="hidden" value="">
+    <input id="payment_customer" type="hidden" name="payment_customer" value="">
+    <input id="currency_code" name="currency_code" type="hidden" value="">
+    <input id="payment_id" type="hidden" name="payment_id" value="">
+    <input id="billingAddrEmail" name="billingAddr[email]" type="hidden" value="">
+    <input id="billingAddrName" name="billingAddr[name]" type="hidden" value="">
+    <input id="billingAddrPhoneNumber" name="billingAddr[phoneNumber]" type="hidden" value="">
+    <!--<input type="hidden" id="payment_currency_rate" name="payment_currency_rate" value="">
+    <input type="hidden" id="payment_markup_price" name="payment_markup_price" value="">-->
+</form>
+   
+
+<script src="js/intlTelInput.js"></script>
+<script src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
+<!--
+<script src="https://cdn.checkout.com/js/checkout.js"></script>-->
+

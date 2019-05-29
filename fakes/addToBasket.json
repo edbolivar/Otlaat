@@ -1,0 +1,113 @@
+{
+    "success": true,
+    "basketHotelRes": {
+        "Token": "8d27366c-1401-4e3a-8107-7f81590b5b8e",
+        "FromDate": "20171127",
+        "ToDate": "20171129",
+        "BreadCrumb": "ATest This is not for sale",
+        "PurchaseToken": "8d27366c-1401-4e3a-8107-7f81590b5b8e",
+        "Status": "Basket",
+        "Currency": "USD",
+        "HotelDetails": {
+            "hotelinfo": {
+                "HotelCode": "72036",
+                "HotelName": "ATest This is not for sale",
+                "countrySymbol": "TR",
+                "HotelCategory": "3",
+                "Address": "Maresal Fevzi 3Cakmak Street, Oteller Region, Lapta",
+                "rating": 4,
+                "fac_Top": 1
+            },
+            "filterinfo": [
+                {
+                    "HotelOccupancy": {
+                        "RoomCount": "1",
+                        "Occupancy": {
+                            "AdultCount": "1",
+                            "ChildCount": "0",
+                            "Passengers": []
+                        }
+                    },
+                    "HotelRoom": {
+                        "HotelRoomDTO": {
+                            "AvailCount": "1",
+                            "CancellationPolicy": {
+                                "CancellationPolicyDTO": {
+                                    "Amount": "902,13",
+                                    "DateTimeFrom": "20171112",
+                                    "StringDateTimeFrom": [],
+                                    "PenaltyType": "Amount",
+                                    "PenaltyPercent": "0",
+                                    "PenaltyDay": "0",
+                                    "DateTimeTo": "20171112"
+                                }
+                            },
+                            "HotelRoomUniqueNumber": {
+                                "XmlServicesUniqueNumber": "e9329cd9-eb1d-4831-a304-1157dba491df|de518b9f-cdb1-4047-bca1-8bc97ee406af|9|72036",
+                                "AdonisUniqueNumber": "23aa09f2-d268-4ca5-833a-1a4c7fb79544",
+                                "XmlServicesType": "One"
+                            },
+                            "Board": {
+                                "Code": "de518b9f-cdb1-4047-bca1-8bc97ee406af",
+                                "Name": "All Inclusive (Non-Refundable)"
+                            },
+                            "RoomType": {
+                                "Characteristic": "1 Bedroom Suite (Sea View)",
+                                "Code": "e9329cd9-eb1d-4831-a304-1157dba491df",
+                                "Name": "1 Bedroom Suite (Sea View) Single Use"
+                            },
+                            "Price": {
+                                "Amount": "902,13",
+                                "Currency": "USD"
+                            }
+                        }
+                    }
+                },
+                {
+                    "HotelOccupancy": {
+                        "RoomCount": "1",
+                        "Occupancy": {
+                            "AdultCount": "2",
+                            "ChildCount": "1",
+                            "Passengers": []
+                        }
+                    },
+                    "HotelRoom": {
+                        "HotelRoomDTO": {
+                            "AvailCount": "1",
+                            "CancellationPolicy": {
+                                "CancellationPolicyDTO": {
+                                    "Amount": "953,68",
+                                    "DateTimeFrom": "20171112",
+                                    "StringDateTimeFrom": [],
+                                    "PenaltyType": "Amount",
+                                    "PenaltyPercent": "0",
+                                    "PenaltyDay": "0",
+                                    "DateTimeTo": "20171112"
+                                }
+                            },
+                            "HotelRoomUniqueNumber": {
+                                "XmlServicesUniqueNumber": "03ac6e01-a0cf-4c4a-b6bf-0f7ff0040656|de518b9f-cdb1-4047-bca1-8bc97ee406af|8|72036",
+                                "AdonisUniqueNumber": "645d76b0-acb8-48bc-a9c8-f00b69bf48c1",
+                                "XmlServicesType": "One"
+                            },
+                            "Board": {
+                                "Code": "de518b9f-cdb1-4047-bca1-8bc97ee406af",
+                                "Name": "All Inclusive (Non-Refundable)"
+                            },
+                            "RoomType": {
+                                "Characteristic": "1 Bedroom Suite (Sea View)",
+                                "Code": "03ac6e01-a0cf-4c4a-b6bf-0f7ff0040656",
+                                "Name": "1 Bedroom Suite (Sea View) Double Use"
+                            },
+                            "Price": {
+                                "Amount": "953,68",
+                                "Currency": "USD"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

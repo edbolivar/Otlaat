@@ -1,0 +1,152 @@
+.PageBG.payment {
+    position: relative;
+}
+.payment__guests-room-board {
+    text-align: left;
+    color: #0099cc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.payment__guests-room-characteristics {
+    font-size: 13px;
+}
+
+.payment__hotel-details__check-label, .payment__hotel-details__check-date {
+    display: inline-block;
+    width: 49%;
+    margin-top: 5px;
+}
+
+.payment__hotel-details__check-label {
+    color: #a1a1a1;
+}
+
+.payment__hotel-details__check-date {
+    text-align: right;
+    font-weight: bold;
+}
+
+.payment-room__board {
+    color: #0099cc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.payment-room__characteristics {
+    font-size: 13px;
+}
+
+.payment-room__view-cancellation {
+    color: #a8a8a8;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.payment-room__view-cancellation:hover {
+    color: #6b6b6b;
+}
+
+.payment-room__adults {
+    font-size: 12px;
+}
+
+.payment-rooms__total-label, .payment-rooms__total-price {
+    display: inline-block;
+    width: 49%;
+}
+
+.payment-rooms__total-label {
+    color: #a1a1a1;
+    font-size: 14px;
+}
+
+.payment-rooms__total-price {
+    color: #72bf66;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.payment .input-md {
+    height: 38px;
+    border-radius: 2px;
+}
+
+.payment-phone {
+    padding-right: 0;
+}
+
+.form-group--icon input{
+    padding-left: 40px;
+}
+
+.form-group--icon > .icon {
+    font-size: 20px;
+    position: absolute;
+    top: 46px;
+    color: #0099cc;
+    left: 25px;
+}
+
+.payment-checkout-form__month, .payment-checkout-form__year {
+    width: 90px !important;
+    float: left;
+}
+
+.payment-checkout-form__year {
+    margin-left: 10px;
+}
+
+.payment-checkout-form__expiration label {
+    display: block;
+}
+
+.payment-checkout-form__cvc {
+    width: 90px !important;
+    margin-bottom: 20px;
+}
+
+.payment-phone .intl-tel-input{
+    width: 100%;
+}
+
+.payment-phone input{
+    width: 100%;
+}
+
+.two-checkout-modal-size .modal-sm {
+    width: 360px !important;
+}
+
+.payment-checkout-form__expiration .year-span {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-right: -7px;
+    font-size: 16px;
+    float: left;
+}
+
+.rooms-portlet-desktop {
+    display: block;
+}
+
+.rooms-portlet-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .payment .col-md-3, .payment .col-md-4 {
+        margin-top: 10px;
+    }
+
+    .rooms-portlet-desktop {
+        display: none;
+    }
+
+    .rooms-portlet-mobile {
+        display: block;
+    }
+}
+

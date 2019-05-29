@@ -1,0 +1,47 @@
+<div class="datePickerWrapper">
+	<div class="container">
+		<div class="datePickerBG">
+			<div class="row colxspadding">
+				<div class="datepicker col-sm-4 col-md-4" >
+					<h5>{{'goWhere' | translate}}</h5>
+					<div class='typeahead-demo' ng-controller="TypeaheadCtrl" style="padding-left: 0 !important;">
+						<input id="txtDestination" type="text" ng-model="chosenDestination" placeholder="{{'destination' | translate}}"
+							   typeahead-loading="loadingLocations"
+							   typeahead-is-open="typeAheadIsOpen"
+							   uib-typeahead="item as item.name for item in getDestinations($viewValue) | limitTo:10"
+							   typeahead-min-length="3"
+							   class="form-control location-autocomplete"/>
+						<i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+						<div ng-show="showErrorMsg"  ng-click="showErrorMsg = false; typeAheadIsOpen = false"
+							  auto-close="disabled" is-open="true" uib-dropdown uib-dropdown-toggle>
+							<ul class="dropdown-menu" id="typeahead-not-results">
+								<i class="glyphicon glyphicon-remove"></i>
+								{{::errorMsg}}
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div ng-controller="DatepickerPopupCtrl" class="calendar-datepicker">
+					<search-calendar start-date="startDate" end-date="endDate" is-required="true"></search-calendar>
+
+				      <div class="col-sm-2 col-md-3 datepicker">
+				      	<h5>{{'travelers' | translate}}</h5>
+					  	<input type="text" class="form-control" value="1 room, 2 adults, 0 children" >
+						  <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+							  <li><a href="#/">1 room, 1 adults, 1 children</a></li>
+							  <li><a href="#/">1 room, 2 adults, 0 children</a></li>
+							  <li><a href="#/">more otions</a></li>
+						  </ul>
+					  </div>
+				</div>
+
+				<div class="col-sm-2 col-md-1 datepicker">
+					<button type="button" class="btn btn-danger datePickerSearch">{{'datePickerSearch' | translate}}</button>
+				</div>
+			</div><!--ROW-->
+		</div><!--datePickerBG-->
+	</div><!--container-->
+</div>
+
+

@@ -1,0 +1,87 @@
+<div class="itemscontainer0"
+     dir-paginate="hotellist in filteredHotels.parent = (hotellists
+                                    | byHotelRange: filterParams
+                                    | mostPopular)
+                                    | itemsPerPage: 10 as resultsFiltering track by $index"
+     current-page="pagination.currentPage">   
+
+    <div class="HoteListWrapper">
+        <figure>
+            <div class="listitem2">
+                <!--<span class="helper"></span>-->
+                <img ng-if="hotellist.img == 'http://www.adonis.com/HotelSmallPhoto/nophoto.jpg' || !hotellist.img"
+                     ng-src="http://tartmus.ee/wp-content/uploads/2016/07/no-image-wide.jpg"/>
+                <!--Added by IGOR: image-not-found-->
+                <img ng-if="hotellist.img != 'http://www.adonis.com/HotelSmallPhoto/nophoto.jpg' && hotellist.img"
+                     image-not-found="http://tartmus.ee/wp-content/uploads/2016/07/no-image-wide1.jpg" h-code="{{hotellist.hotelCode}}" h-page="{{pagination.currentPage}}" 
+                     ng-src="{{hotellist.img}}"/>
+                <a href="#"></a>
+            </div>
+        </figure>
+        <div>
+            <div class="itemlabel3">
+                <div class="labelright">
+                    <div class="hidden-xs">
+                        <br>
+                        <img ng-if="hotellist.category.length === 1" class="arabic-stars"
+                             ng-src="{{'css/images/filter-rating-' + (hotellist.category) +'.png'}}"
+                             width="76" alt="">
+                        <span ng-if="hotellist.category.length > 1" class="category-text">{{hotellist.category}}</span>
+                        <br>
+                        <br>
+                        <span class="size11 grey ratings-text" ng-if="hotellist.rating">
+                                               <span> {{hotellist.rating}}</span> {{hotellist.rating | getRatingText}}
+                                            </span>
+                        <span class="size11 grey ratings-text" ng-if="!hotellist.rating" translate="No rating yet"></span>
+                        <br>
+                        <br>
+                    </div>
+                    <span class="green size18">
+                        <b class="nowrap hotel-details-price-ar" ng-bind-html="hotellist.price |
+                            currencyConverterFilter:
+                            otlaat_currency.currencyPrice : otlaat_currency.currency : true: markupPrice"></b>
+                        <div class="size11 grey">{{dailyPriceText}}</div>
+                    </span>
+                    <br>
+                    <button ng-click="bookNow(hotellist)" class="bookbtn mt1" type="submit">{{'btnBookNow' | translate}}</button>
+                    <small class="grey taxesIncluded" ng-class="{'ar': lang === 'ar'}" translate="listings.taxesIncluded" style="padding-left: 5px;"></small>
+                </div>
+                <div class="labelleft2">
+                    <div class="hotelListName" ng-click="bookNow(hotellist)">{{hotellist.name}}</div>
+                    <span class="hotelListHotDeal"></span>
+                    <span class="hotelListRecomended glyphicon glyphicon-thumbs-up"
+                          ng-if="hotellist.top"></span>
+                    <div class="hotelListAddress">{{hotellist.address | cutString: 55}}</div>
+                    <div class="visible-xs clearfix hotelListRatings">
+                        <img ng-if="hotellist.category.length === 1" ng-src="{{'css/images/filter-rating-' + hotellist.category +'.png'}}"
+                             width="76" alt="" class="pull-left arabic-stars">
+                        <span ng-if="hotellist.category.length > 1" class="category-text">{{hotellist.category}}</span>
+                        <span class="size11 grey ratings-text pull-right" ng-if="hotellist.rating">
+                                               <span> {{hotellist.rating}}</span> {{hotellist.rating | getRatingText}}
+                                            </span>
+                    </div>
+                    <br>
+                    <p class="grey hotelList_description">{{hotellist.desc ? hotellist.desc : ('No description' | translate) | cutString: 151}}</p>
+                    <ul class="hotelpreferences">
+                        <li class="preference active {{preference}}" ng-hide="!value" title="{{getLabel(preference) | translate}}"
+                            data-toggle="tooltip" data-placement="auto" tooltip
+                            ng-repeat="(preference, value) in hotellist.facilities track by $index"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div>
+        <hr class="featurette-divider3">
+    </div>
+</div>
+<div class="pagination right paddingbtm20">
+    <!--<ul uib-pagination
+        total-items="(hotellists | mostPopular).length"
+        items-per-page="pageSize"
+        ng-model="currentPage" class="pagination-sm" boundary-link-numbers="true"></ul> -->
+    <dir-pagination-controls
+            max-size="dirSize" direction-links="true" boundary-links="true">
+    </dir-pagination-controls>
+</div>

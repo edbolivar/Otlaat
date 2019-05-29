@@ -1,0 +1,125 @@
+.view-booking__hotel-image-wrapper {
+    float: left;
+    width: 40%;
+}
+
+.view-booking__hotel-image-wrapper-arabic{
+    float: right;
+    width: 40%;
+}
+
+.view-booking__details {
+    float: left;
+    width: 60%;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.view-booking__details-arabic{
+    float:right;
+    width:60%;
+    padding-left:15px;
+    padding-top:15px;
+}
+
+.view-booking__price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.view-booking__date {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.view-booking__date-to {
+    padding-top: 10px;
+}
+
+.view-booking__id {
+    font-weight: bold;
+}
+
+.view-booking__action {
+    padding-bottom: 5px;
+}
+
+.view-booking__action a {
+    cursor: pointer;
+}
+
+.view-booking__cancellation-button .bookbtn {
+    float: right;
+}
+
+.cancel-booking__label {
+    font-weight: bold;
+}
+
+.view-booking__name {
+    color: #0099CC;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.view-booking__address {
+    font-size: 13px;
+    color: grey;
+}
+
+.view-booking__starts, .view-booking__rating {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.view-booking__rating {
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.view-booking__dates-price-wrapper {
+    padding-top: 15px;
+}
+
+.view-booking__dates, .view-booking__price-container {
+    display: inline-block;
+    width: 48%;
+}
+
+.view-booking__dates {
+    border-right: 1px solid #e0e0e0;
+}
+
+.view-booking__price-container {
+    float: right;
+    text-align: right;
+}
+
+.icon-user.icons {
+    padding-right: 5px;
+}
+
+.view-booking__stars-image {
+    transform: scale(-1, 1);
+}
+
+@media (max-width: 991px) {
+    .view-booking__zero-padding-mobile {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .view-booking__hotel-image-wrapper {
+        float: none;
+        width: 100%;
+    }
+
+    .view-booking__details {
+        float: none;
+        width: 100%;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+}

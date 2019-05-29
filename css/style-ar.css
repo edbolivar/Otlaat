@@ -1,0 +1,607 @@
+
+
+.hotel-details-modify {
+    float: left !important;
+}
+
+.rooms-group__header_name, .min-price__board-name, .rooms-group__room-name {
+    text-align: right !important;
+    direction: ltr;
+}
+
+.rooms-group__room-amenities .hotel-list {
+    float: right !important;
+}
+
+.dropdown-menu.arabic, .arabic .dropdown-menu {
+    left: -60px !important;
+}
+
+
+
+.home-page .dropdown-menu.arabic, .arabic .dropdown-menu {
+    left: 0 !important;
+}
+
+.rooms-group__room-book {
+    border-left: none !important;
+    border-right: 1px solid #f2f2f2 !important;
+}
+
+.ChooseLanguage {
+    margin-right: 7px !important;
+}
+
+.rooms-group__room-amenities {
+    float: right !important;
+}
+
+.payment .bookbtn-container {
+    float: left !important;
+}
+
+.bulk-rooms .rooms-group__room-book {
+    text-align: left !important;
+}
+
+.payment__guests-room-board, .payment-room__board, .payment-room__characteristics {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.payment-rooms__total-price {
+    text-align: left !important;
+}
+
+.payment__help-text span {
+    display: block;
+    width: 100%;
+}
+
+.rooms-group__room-element.rooms-group__room-book {
+    width: 200px;
+    text-align: left !important;
+}
+
+.rooms-page__cheapest-rooms {
+    padding-left: 0px !important;
+    padding-right: 12px !important;
+}
+
+.rooms-page__cheapest-rooms-board {
+    direction: ltr !important;
+    text-align: right;
+}
+
+.pull-left.ar {
+    float: right !important;
+}
+
+.pull-right.ar {
+    float: left !important;
+}
+
+ul.bcrumbs li {
+    margin-right: 0 !important;
+}
+
+a.homebtn {
+    margin-left: 5px !important;
+    margin-right: 15px !important;
+}
+
+.payment-checkout-form__month, .payment-checkout-form__year, .payment-checkout-form__expiration .year-span {
+    float: right !important;
+}
+
+.payment-checkout-form__expiration .year-span {
+    margin-left: 10px !important;
+    margin-top: 5px !important;
+    margin-right: 10px !important;
+}
+
+.confirmation-page__download {
+    padding-left: 15px;
+}
+
+.payment-room__adults .icon-user {
+    float: right;
+    vertical-align: middle;
+    padding-left: 2px;
+}
+
+.paypal-radio-image, .checkout-radio-image {
+    background-position: left top !important;
+}
+
+.view-booking__dates {
+    width: 50%;
+    text-align: left;
+}
+
+.view-booking__cancellation-button {
+    float: left;
+}
+
+.view-booking__hotel-image-wrapper {
+    float: right !important;
+}
+
+.view-booking__details {
+    padding-right: 15px !important;
+    padding-left: 0 !important;
+}
+
+.view-booking__stars-image {
+    transform: none !important;
+}
+
+.view-booking__price-container {
+    float: left !important;
+    text-align: left !important;
+}
+
+.view-booking__dates {
+    border-right: none !important;
+    border-left: 1px solid #e0e0e0;
+    text-align: right;
+}
+
+.booking-cancelled__id {
+    float: left !important;
+}
+
+.booking-cancelled__title {
+    float: right !important;
+}
+
+.sidebarwrapper .logout-button .glyphicon {
+    margin-left: 5px !important;
+}
+
+.uib-daypicker table[role="grid"] {
+    direction: ltr;
+}
+
+.arabic-stars {
+    transform: rotateY(180deg);
+}
+
+.hotel-details-price-ar {
+    direction: ltr;
+    display: block;
+    float: right;
+    padding-left: 10px;
+}
+
+.rooms-group__header_name {
+    direction: rtl;
+}
+
+.arabic-breadcrumbs li {
+    float: right !important;
+}
+
+.direction-ltr-ar {
+    direction: ltr !important;
+}
+
+.rtlclsnew{
+    direction: rtl !important;
+}
+
+.direction-rtl-ar {
+    direction: rtl !important;
+}
+
+.float-left-ar {
+    float: left !important;
+}
+
+.flag-container {
+    direction: ltr;
+}
+
+.selected-flag {
+    direction: rtl;
+}
+
+.hotellist__dates-chosen-label {
+    padding-left: 15px;
+}
+
+.panel-default .glyphicon-triangle-top, .panel-default .glyphicon-triangle-bottom {
+    float: left !important;
+}
+
+.margin-left-35{
+    margin: 0 35px 0 0 !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .bulk-rooms .rooms-group__room-book {
+        position: relative;
+        width: 100%;
+        text-align: right !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .date-guest-picker .remove-guest-button-mobile {
+        left: -10px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .rooms-group__header_tax {
+        text-align: right !important;
+        width: 100%;
+    }
+
+    .rooms-group__room-element.rooms-group__room-book {
+        width: auto;
+        text-align: left !important;
+    }
+
+    .payment .intl-tel-input {
+        width: 100%;
+    }
+
+    .bookings__element__detail-download {
+        text-align: left !important;
+    }
+}
+
+.payment__hotel-details__check-date {
+    text-align: left !important;
+}
+
+.home-page .typeahead-demo .dropdown-menu {
+    right: 26px !important;
+}
+
+.date-picker-options .glyphicon-chevron-down {
+    padding-top: 2px;
+    padding-right: 5px;
+    float: left;
+}
+
+.date-picker-options .dropdown-btn {
+    text-align: right !important;
+}
+
+.calendar-input.calendar-select {
+    padding-right: 5px !important;
+}
+
+.sidebarMenuBg .icon-arrow {
+    right: auto;
+    left: 20px !important;
+}
+.spinner-container.search-loader {
+    position: fixed !important;
+    left: 25%;
+}
+@media (max-width: 767px) {
+
+    .hotel-details-modify {
+        float: left !important;
+    }
+
+    .rooms-group__header_name, .min-price__board-name, .rooms-group__room-name {
+        text-align: right !important;
+        direction: ltr;
+    }
+
+    .rooms-group__room-amenities .hotel-list {
+        float: right !important;
+    }
+
+    .dropdown-menu.arabic, .arabic .dropdown-menu {
+        left: -60px !important;
+    }
+
+
+
+    .home-page .dropdown-menu.arabic, .arabic .dropdown-menu {
+        left: 0 !important;
+    }
+
+    .rooms-group__room-book {
+        border-left: none !important;
+        border-right: 1px solid #f2f2f2 !important;
+    }
+
+    .ChooseLanguage {
+        margin-right: 7px !important;
+    }
+
+    .rooms-group__room-amenities {
+        float: right !important;
+    }
+
+    .payment .bookbtn-container {
+        float: left !important;
+    }
+
+    .bulk-rooms .rooms-group__room-book {
+        text-align: left !important;
+    }
+
+    .payment__guests-room-board, .payment-room__board, .payment-room__characteristics {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+
+    .payment-rooms__total-price {
+        text-align: left !important;
+    }
+
+    .payment__help-text span {
+        display: block;
+        width: 100%;
+    }
+
+    .rooms-group__room-element.rooms-group__room-book {
+        width: 200px;
+        text-align: left !important;
+    }
+
+    .rooms-page__cheapest-rooms {
+        padding-left: 0px !important;
+        padding-right: 12px !important;
+    }
+
+    .rooms-page__cheapest-rooms-board {
+        direction: ltr !important;
+        text-align: right;
+    }
+
+    .pull-left.ar {
+        float: right !important;
+    }
+
+    .pull-right.ar {
+        float: left !important;
+    }
+
+    ul.bcrumbs li {
+        margin-right: 0 !important;
+    }
+
+    a.homebtn {
+        margin-left: 5px !important;
+        margin-right: 15px !important;
+    }
+
+    .payment-checkout-form__month, .payment-checkout-form__year, .payment-checkout-form__expiration .year-span {
+        float: right !important;
+    }
+
+    .payment-checkout-form__expiration .year-span {
+        margin-left: 10px !important;
+        margin-top: 5px !important;
+        margin-right: 10px !important;
+    }
+
+    .confirmation-page__download {
+        padding-left: 15px;
+    }
+
+    .payment-room__adults .icon-user {
+        float: right;
+        vertical-align: middle;
+        padding-left: 2px;
+    }
+
+    .paypal-radio-image, .checkout-radio-image {
+        background-position: left top !important;
+    }
+
+    .view-booking__dates {
+        width: 50%;
+        text-align: left;
+    }
+
+    .view-booking__cancellation-button {
+        float: left;
+    }
+
+    .view-booking__hotel-image-wrapper {
+        float: right !important;
+    }
+
+    .view-booking__details {
+        padding-right: 15px !important;
+        padding-left: 0 !important;
+    }
+
+    .view-booking__stars-image {
+        transform: none !important;
+    }
+
+    .view-booking__price-container {
+        float: left !important;
+        text-align: left !important;
+    }
+
+    .view-booking__dates {
+        border-right: none !important;
+        border-left: 1px solid #e0e0e0;
+        text-align: right;
+    }
+
+    .booking-cancelled__id {
+        float: left !important;
+    }
+
+    .booking-cancelled__title {
+        float: right !important;
+    }
+
+    .sidebarwrapper .logout-button .glyphicon {
+        margin-left: 5px !important;
+    }
+
+    .uib-daypicker table[role="grid"] {
+        direction: ltr;
+    }
+
+    .arabic-stars {
+        transform: rotateY(180deg);
+    }
+
+    .hotel-details-price-ar {
+        direction: ltr;
+        display: block;
+        float: right;
+        padding-left: 10px;
+    }
+
+    .rooms-group__header_name {
+        direction: rtl;
+    }
+
+    .arabic-breadcrumbs li {
+        float: right !important;
+    }
+
+    .direction-ltr-ar {
+        direction: ltr !important;
+    }
+
+    .rtlclsnew{
+        direction: rtl !important;
+    }
+
+    .direction-rtl-ar {
+        direction: rtl !important;
+    }
+
+    .float-left-ar {
+        float: left !important;
+    }
+
+    .flag-container {
+        direction: ltr;
+    }
+
+    .selected-flag {
+        direction: rtl;
+    }
+
+    .hotellist__dates-chosen-label {
+        padding-left: 15px;
+    }
+
+    .panel-default .glyphicon-triangle-top, .panel-default .glyphicon-triangle-bottom {
+        float: left !important;
+    }
+
+    .margin-left-35{
+        margin: 0 35px 0 0 !important;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .bulk-rooms .rooms-group__room-book {
+            position: relative;
+            width: 100%;
+            text-align: right !important;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .date-guest-picker .remove-guest-button-mobile {
+            left: -10px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .rooms-group__header_tax {
+            text-align: right !important;
+            width: 100%;
+        }
+
+        .rooms-group__room-element.rooms-group__room-book {
+            width: auto;
+            text-align: left !important;
+        }
+
+        .payment .intl-tel-input {
+            width: 100%;
+        }
+
+        .bookings__element__detail-download {
+            text-align: left !important;
+        }
+    }
+
+    .payment__hotel-details__check-date {
+        text-align: left !important;
+    }
+
+    .home-page .typeahead-demo .dropdown-menu {
+        right: 26px !important;
+    }
+
+    .date-picker-options .glyphicon-chevron-down {
+        padding-top: 2px;
+        padding-right: 5px;
+        float: left;
+    }
+
+    .date-picker-options .dropdown-btn {
+        text-align: right !important;
+    }
+
+    .calendar-input.calendar-select {
+        padding-right: 5px !important;
+    }
+
+    .sidebarMenuBg .icon-arrow {
+        right: auto;
+        left: 20px !important;
+    }
+    .spinner-container.search-loader {
+        position: fixed !important;
+        left: 25%;
+    }
+    @media (max-width: 767px) {
+        .home-page .typeahead-demo .dropdown-menu {
+            width: 100% !important;
+            right: 0 !important;
+        }
+    }
+
+    @media (max-width: 769px) {
+        .home-page .typeahead-demo .dropdown-menu {
+            right: 24px !important;
+        }
+    }
+
+    @media (max-width: 830px) {
+        .datepicker-options {
+            position: relative;
+        }
+        .datepicker-options .glyphicon.glyphicon-chevron-down {
+            top: 9px;
+            position: absolute;
+            left: 5px;
+        }
+    }
+
+    .calendar-datepicker .calendar-input {
+        border-right: 1px solid;
+    }
+
+    .home-page .typeahead-demo .dropdown-menu {
+        width: 100% !important;
+        right: 0 !important;
+    }
+}
+
+@media (max-width: 769px) {
+    .home-page .typeahead-demo .dropdown-menu {
+        right: 24px !important;
+    }
+}

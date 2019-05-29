@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html ng-app="hotelApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+
+    <title ng-bind="page_title"></title> 
+    <meta name="description" content="{{ page_description }}">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW" ng-if="page_title != '111'">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link id="styleAr" href="" rel="stylesheet" type="text/css">
+    <link href="css/stylesheets/main.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/homeSlider.css" rel="stylesheet" type="text/css">
+    <link href="css/typeahead.css" rel="stylesheet" type="text/css">
+    <link href="css/rangeSlider.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/hoteldetails.css" rel="stylesheet">
+    <link href="css/payment.css" rel="stylesheet">
+    <link href="css/bookings.css" rel="stylesheet">   
+    <link href="css/confirm.css" rel="stylesheet">
+    <link href="css/viewBooking.css" rel="stylesheet">
+    <link href="css/select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <link href="css/hotelConfirmation.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.3.0/rzslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.4/flexslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link href="css/hotelDetailstyle.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/homeSlider.js"></script>
+
+    <link id="style2" href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link id="style1" href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://lgalfaso.github.io/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-touch.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><!-- added for tooltip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.3.0/rzslider.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script src="module/app.js"></script>
+    <script src="module/httpInterceptor.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/hotelDetailSlider.js"></script>
+
+    <script src="controllers/homeCtrl.js"></script>
+    <script src="controllers/typeaheadCtrl.js"></script>
+    <script src="controllers/datepickerCtrl.js"></script>
+    <script src="controllers/ModalCtrl.js"></script>
+    <script src="controllers/hotellistCtrl.js"></script>
+    <script src="controllers/listCtrl.js"></script>
+    <script src="controllers/userproCtrl.js"></script>
+    <script src="controllers/profileCtrl.js"></script>
+    <script src="controllers/aboutCtrl.js"></script>
+    <script src="controllers/contactCtrl.js"></script>
+    <script src="controllers/faqCtrl.js"></script>
+    <script src="controllers/paymentCtrl.js?v=1.2.5"></script>
+    <script src="controllers/registerCtrl.js"></script>
+    <script src="controllers/sliderCtrl.js"></script>
+    <script src="controllers/loginCtrl.js"></script>
+    <script src="controllers/contactCtrl.js"></script>
+    <script src="controllers/checkLoginCtrl.js"></script>
+    <script src="controllers/hoteldetailsCtrl.js"></script>
+    <script src="controllers/passwordResetCtrl.js"></script>
+    <script src="controllers/bookingsController.js"></script>
+    <script src="controllers/twocheckoutController.js"></script>
+    <script src="controllers/hotelConfirmationCtrl.js"></script>
+    <script src="controllers/viewBookingCtrl.js"></script>
+    <script src="controllers/bookingCancelledController.js"></script>
+    <script src="controllers/myReservationCtrl.js"></script>
+    <script src="controllers/currencyConverterController.js"></script>
+
+    <script src="services/auth.service.js"></script>
+    <script src="services/hotelSearch.service.js"></script>
+    <script src="services/objToQuery.service.js"></script>
+    <script src="services/dateService.service.js"></script>
+    <script src="services/constants.service.js"></script>
+    <script src="services/hotelDetails.service.js"></script>
+    <script src="services/loginModal.service.js"></script>
+    <script src="services/registerModal.service.js"></script>
+    <script src="services/languageService.service.js"></script>
+    <script src="services/userProfile.service.js"></script>
+    <script src="services/errorsService.service.js"></script>
+    <script src="services/notificationModal.service.js"></script>
+    <script src="services/getDeep.js"></script>
+    <script src="services/cancellationModal.js"></script>
+    <script src="services/globalSpinner.service.js"></script>
+    <script src="services/payment.service.js"></script>
+    <script src="services/checkout.service.js"></script>
+    <script src="services/refreshModal.service.js"></script>
+    <script src="services/confirmErrorModal.service.js"></script>
+    <script src="services/twoCheckoutModal.service.js"></script>
+    <script src="services/cancelBookingModal.js"></script>
+    <script src="services/modalsStack.service.js"></script>
+    <script src="services/hotelConfirmation.service.js"></script>
+    <script src="services/reservationCancelBookingModal.js"></script>
+    <script src="services/paypal.service.js"></script>
+    <script src="services/homePageService.service.js"></script>
+    <script src="services/currencyConverterService.service.js"></script>
+
+    <script src="directives/search-calendar/search-calendar.directive.js"></script>
+    <script src="directives/set-dropdown-width/set-dropdown-width.directive.js"></script>
+    <script src="directives/dirPagination/dirPagination.js"></script>
+    <script src="directives/imageNotFound.directive.js"></script>
+    <script src="directives/initTrueModel.directive.js"></script>
+    <script src="directives/loader.directive.js"></script>
+    <script src="directives/numbers-only.directive.js"></script>
+    <script src="directives/maxSize.directive.js"></script>
+    <script src="directives/stickyNav.directive.js"></script>
+    <script src="directives/sliderFix.directive.js"></script>
+    <script src="directives/english-only.directive.js"></script>
+    <script src="directives/toolTip.directive.js"></script>
+    <script src="directives/search-list/search-list-panel.directive.js"></script>
+    <script src="directives/sliderDetails.directive.js"></script>
+
+    <script src="components/search-panel/search-panel.component.js"></script>
+    <script src="components/guest-selector/guest-selector.component.js"></script>
+    <script src="filters/global.ng.js"></script>
+    <script src="filters/byHotelRange.filter.js"></script>
+    <script src="filters/byHotelStars.filter.js"></script>
+    <script src="filters/byHotelPreferences.filter.js"></script>
+    <script src="filters/byHotelAcomadations.filter.js"></script>
+    <script src="filters/byHotelName.filter.js"></script>
+    <script src="filters/cutString.filter.js"></script>
+    <script src="filters/noZero.js"></script>
+    <script src="filters/filterBookings.filter.js"></script>
+    <script src="filters/commaSeparator.js"></script>
+    <script src="filters/currencyConverterFilter.filter.js"></script>
+
+    <script src="js/angular-flexslider.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/rangeSlider.js"></script>
+    <script src="js/angular-translate.js"></script>
+    <script src="js/angular-translate-loader-static-files.min.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+
+</head>
+
+<body>
+<loader class="internal-filters-loader-container" ng-class="{'with-text': globalSpinnerText, 'not-transparent': globalSpinnerNotTransparent}" ng-cloak="" global="true" ng-if="globalSpinner">
+    <div class="spinner-container">
+        <div class="loader">Loading...</div>
+        <div class="spinner-text" ng-if="globalSpinnerText">{{globalSpinnerText}}</div>
+    </div>
+</loader>
+
+<div class="body" ng-cloak>
+    <div id="mask" onclick="closeNav()"></div>
+    <div ng-include="'templates/header.html'"></div>
+
+    <div ui-view></div>
+
+    <div ng-include="'templates/footer.html'"></div>
+</div>
+
+
+<!--<button ng-click="change_title();">Change Title</button>-->
+
+<script src="https://cdn.checkout.com/sandbox/js/checkout.js">
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM7rYwOtlc82w86drHdXOhQhG4oWsPkMg"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,300 @@
+<div class="PageBG hotel-list">
+
+    <div class="container breadcrumb"> 
+        <div>
+            <a class="homebtn" ng-class="{'right': lang === 'ar', 'left': lang !== 'ar'}" href="#"></a>
+            <div ng-class="{'right': lang === 'ar', 'left': lang !== 'ar'}">
+                <ul class="bcrumbs">
+                    <li ng-if="pageSetup.language !== 'ar'">
+                        <span class="inline-block-i" ng-if="pageSetup.language === 'en'">&rarr;</span>
+                        <span class="inline-block-i" ng-if="pageSetup.language === 'ar'">&larr;</span>
+                        {{'Hotels' | translate}}
+                    </li>
+                    <li>
+                        <span class="inline-block-i" ng-if="pageSetup.language === 'en'">&rarr;</span>
+                        <span class="inline-block-i" ng-if="pageSetup.language === 'ar'">&larr;</span>
+                        {{pageSetup.breadcrumb}}
+                    </li>
+                    <li ng-if="pageSetup.language === 'ar'">
+                        <span class="inline-block-i" ng-if="pageSetup.language === 'en'">&rarr;</span>
+                        <span class="inline-block-i" ng-if="pageSetup.language === 'ar'">&larr;</span>
+                        {{'Hotels' | translate}}
+                    </li>
+                </ul>
+            </div>
+            <!--<a class="backbtn right" href="#"></a>-->
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="loading" ng-if="isFetching">
+        <img src="css/images/loading.gif" alt="" width="90" />
+    </div>
+    <div class="container not-found" ng-if="!isFetching" ng-show="!dataReceived && !hotellists && !serverErorr">
+        <h2>No Hotel Found</h2>
+    </div>
+    <div class="container not-found" ng-if="!isFetching" ng-show="!dataReceived && !hotellists && serverErorr">
+        <h2>No result found. Pease try again later.</h2>
+    </div>
+
+    <div ng-show="!isFetching && dataReceived" class="container" style="background-color: white; border: 1px solid #cccccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.13); height: auto; margin-top: 32px;">
+
+        <div class="row">
+            <div class="col-sm-3 searchfilter" style="background-color: #f2f2f2; height: auto;">
+                <!--<div ng-class="{'disabled-search': filteredHotels.parent && filteredHotels.parent.length === 0 && searchByTopFilters}">-->
+                <div ng-hide="filteredHotels.parent && filteredHotels.parent.length === 0 && searchByTopFilters">
+                    <div class="filtertip">
+                        <div class="padding20">
+                            <p class="size13"><span class="size18 bold counthotel">{{filteredHotels.parent.length || 0}}</span>
+                                {{'Hotels starting at' | translate}}</p>
+                            <p class="size30 bold"><span
+                                    class="countprice hotel-details-price-ar padding-left-0"
+                                    style="float: none" ng-if="pageSetup.starting_at" 
+                                    ng-bind-html="pageSetup.starting_at | currencyConverterFilter:
+                                otlaat_currency.currencyPrice : otlaat_currency.currency : true : markupPrice">
+                            </span></p>
+                            <p class="size13">{{'Narrow results or' | translate}} <a href="#">{{'view all' | translate}}</a></p>
+                        </div>
+                        <div class="tip-arrow" style="bottom: -9px;"></div>
+                    </div>
+                    <nav class="filtersNav">
+                        <ul>
+                            <li><a href="#" class="popularbtn filterBy" ng-click="toggleFilters($event)"
+                                   ng-class="{'active': filtersActive}">{{'Filter by' | translate}}</a></li>
+                            <li>
+                                <div class="custom-select">
+                                    <main>
+                                        <span id="mobile-sort-text"></span>
+                                        <select ng-change="mobileSort(sort.mobile)" ng-model="sort.mobile" id="mobile-sort">
+                                            <option value="#">{{'Sort by' | translate}}</option>
+                                            <option value="price">{{'Price Ascending' | translate}}</option>
+                                            <option value="price#">{{'Price Descending' | translate}}</option>
+                                            <option value="category">{{'Stars Ascending (1-5)' |
+                                                translate}}</option>
+                                            <option value="category#">{{'Stars Descending (5-1)' |
+                                                translate}}</option>
+                                            <option value="name">{{'Name (A-Z)' | translate}}</option>
+                                            <option value="name#">{{'Name (Z-A)' | translate}}</option>
+                                        </select>
+                                        <i></i>
+                                    </main>
+                                </div>
+                            </li>
+                            <li><a href="#" class="popularbtn" ng-click="togglePopular($event)"
+                                   ng-class="{'active': most_popular}">{{'Most Popular' | translate}}</a></li>
+                        </ul>
+                    </nav>
+                    <div class="hotellist-dates-mobile">
+                        <search-list hotel-search="hotelSearch"
+                                     hotel-destination="hotelDestination"
+                                     dates="search">
+                        </search-list>
+                    </div>
+                    <section class="filters" ng-class="{'active': filtersActive}">
+                        <div class="padding20title">
+                            <h3 class="opensans dark alignleft">{{'Filter by' | translate}}</h3>
+                        </div>
+                        <div class="line2"></div>
+
+                        <!--Categories filters-->
+                        <uib-accordion>
+                            <div uib-accordion-group class="panel-default stars-filter"
+                                 is-open="status.isStarOpen">
+                                <uib-accordion-heading>{{'Star rating' | translate}}
+                                    <i class="pull-right glyphicon"
+                                       ng-class="{'glyphicon-triangle-top': status.isStarOpen, 'glyphicon-triangle-bottom': !status.isStarOpen}"></i>
+                                </uib-accordion-heading>
+
+                                <div class="checkbox" ng-repeat="category in categories | orderBy">
+                                    <label>
+                                        <input type="checkbox"
+                                               init-true-model
+                                               ng-model="filterParams.star[category]"/>
+                                        <span></span>
+                                        <img ng-if="category.length === 1"
+                                             ng-src="css/images/filter-rating-{{category}}.png"
+                                             class="imgpos1 arabic-stars" alt="">
+                                        <span ng-if="category.length > 1">{{::category  | translate}}</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </uib-accordion>
+
+
+                        <!--Slider filter-->
+                        <uib-accordion>
+                            <div uib-accordion-group class="panel-default" is-open="status.isPriceOpen">
+                                <uib-accordion-heading>{{'Price range' | translate}}
+                                    <i class="pull-right glyphicon"
+                                       ng-class="{'glyphicon-triangle-top': status.isPriceOpen, 'glyphicon-triangle-bottom': !status.isPriceOpen}"></i>
+                                </uib-accordion-heading>
+                                <div class="panel-range-slider"  ng-class="{'arab-slider': $root.lang === 'ar'}">
+                                    <rzslider rz-slider-model="filterParams.priceRange.minValue"
+                                              rz-slider-high="filterParams.priceRange.maxValue"
+                                              ng-if="rangeHackShow"
+                                              ng-init="renderRzSlider()"
+                                              rz-slider-options="priceRange.options">
+                                    </rzslider>
+                                    <div class="ranges">
+                                        <p class="hotel-details-price-ar padding-left-0" ng-bind-html="filterParams.priceRange.minValue |
+                                            currencyConverterFilter: otlaat_currency.currencyPrice : otlaat_currency.currency : true : markupPrice | noZero"></p>
+                                        <p class="hotel-details-price-ar padding-left-0"
+                                           ng-bind-html="filterParams.priceRange.maxValue |
+                                            currencyConverterFilter: otlaat_currency.currencyPrice : otlaat_currency.currency : true : markupPrice | noZero"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </uib-accordion>
+
+                        <!--Accomodation Type filter-->
+                        <uib-accordion>
+                            <div uib-accordion-group class="panel-default" is-open="status.isAcomadationOpen">
+                                <uib-accordion-heading>{{'Acomadation type' | translate}}
+                                    <i class="pull-right glyphicon"
+                                       ng-class="{'glyphicon-triangle-top': status.isAcomadationOpen, 'glyphicon-triangle-bottom': !status.isAcomadationOpen}"></i>
+                                </uib-accordion-heading>
+
+                                <!--Added by Igor-->
+                                <div class="checkbox" ng-repeat="(key, value) in a_list track by value.code" ng-if="value.count > 0" >
+                                    <label>
+                                        <input type="checkbox" name="optionsRadios{{key}}"
+                                               init-true-model
+                                               ng-model="filterParams.acomadation[value.code]" ng-show="$root.lang === 'en'"
+                                               id="Acomodation2" value="###">
+                                        <span></span>
+                                        <span ng-bind-html="key | translate"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </uib-accordion>
+
+                        <!--Hotel Preferences Filter-->
+                        <uib-accordion>
+                            <div uib-accordion-group class="panel-default" is-open="status.isHotelPrefOpen">
+                                <uib-accordion-heading>{{'Hotel Preferences' | translate}}
+                                    <i class="pull-right glyphicon"
+                                       ng-class="{'glyphicon-triangle-top': status.isHotelPrefOpen, 'glyphicon-triangle-bottom': !status.isHotelPrefOpen}"></i>
+                                </uib-accordion-heading>
+
+
+                                <!--Added By Igor-->
+                                <div class="checkbox" ng-repeat="(key, value) in p_list" ng-if="value > 0">
+                                    <label>
+                                        <input type="checkbox"
+                                               init-true-model
+                                               ng-model="filterParams.preferences[key]">
+                                        <span></span>
+                                        {{::getLabel(key) | translate}}
+                                    </label>
+                                </div>
+                            </div>
+                        </uib-accordion>
+
+                    </section>
+                </div>
+
+                <!-- hidden filter section starts -->
+                <div ng-show="filteredHotels.parent && filteredHotels.parent.length === 0 && searchByTopFilters">
+                    <div class="filtertip">
+                        <div class="padding20">
+                            <p class="size13"><span class="size18 bold counthotel">0</span>
+                                {{'Hotels starting at' | translate}}</p>
+                            <p class="size30 bold"><span
+                                    class="countprice hotel-details-price-ar padding-left-0"
+                                    style="float: none"
+                                    ng-bind-html="0 | currencyConverterFilter:
+                                otlaat_currency.currencyPrice : otlaat_currency.currency : true : markupPrice">
+                            </span></p>
+                            <p class="size13">{{'Narrow results or' | translate}} <a href="#">{{'view all' | translate}}</a></p>
+                        </div>
+                        <div class="tip-arrow" style="bottom: -9px;"></div>
+                    </div>
+                    <nav class="filtersNav" style="min-height: 80px; background-color: #F2F2F2">
+
+                    </nav>
+                </div>
+                <!-- hidden filter section ends -->
+            </div>
+            <div class="col-sm-9 screenfixfooter">
+                <loader class="internal-filters-loader-container" screen-top="true"
+                        ng-if="isFetchingWithFilters">
+                    <div class="spinner-container  search-loader">
+                        <div class="loader">Loading...</div>
+                    </div>
+                </loader>
+                <div>
+
+                    <!-- Top filters -->
+                    <div class="topsortby"
+                         ng-class="{'no-border': filteredHotels.parent && filteredHotels.parent.length == 0}" style="opacity: 1; ">
+                        <div class="row hotellist__searchlist-row">
+                            <div class="hotellist__searchlist-wrapper">
+                                <!-- Listing page Search panel starts -->
+                                <search-list hotel-search="hotelSearch"
+                                             hotel-destination="hotelDestination"
+                                             dates="search">
+                                </search-list>
+                                <!-- Listing page Search panel ends -->
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Sorting section -->
+                        <div ng-show="filteredHotels.parent && filteredHotels.parent.length > 0">
+                            <div class="col-xs-5 offset-0" style="padding-left: 0;">
+                                <div class="left mt7" ng-class="{'pull-right margin-left-15': lang === 'ar'}" style="top: 30px;"><b>{{'Sort by' | translate}}</b></div>
+                                <div class="right wh70percent" style="padding-left: 10px">
+                                    <label class="control-label">{{'Guest rating' | translate}}</label>
+                                    <select class="form-control" ng-model="sort.guest_rating" ng-change="guestRatingSort(); redirectToTheFirstPage();">
+                                        <option value="#" disabled translate="pleaseSelect"></option>
+                                        <option value="{{'guestAscending' | translate}}">{{'guestAscending' | translate}}</option>
+                                        <option value="{{'guestDescending' | translate}}">{{'guestDescending' | translate}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="w50percent">
+                                    <div class="wh90percent">
+                                        <label class="control-label">{{'Hotel name' | translate}}</label>
+                                        <select class="form-control mySelectBoxClass hasCustomSelect"
+                                                ng-change="nameSort(); redirectToTheFirstPage();" ng-model="sort.name">
+                                            <option value="#" disabled translate="pleaseSelect"></option>
+                                            <option value="{{'aToZ' | translate}}">{{'aToZ' | translate}}</option>
+                                            <option value="{{'zToA' | translate}}">{{'zToA' | translate}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="w50percentlast after-divider">
+                                    <div class="wh90percent">
+                                        <label class="control-label">{{'Hotel price' | translate}}</label>
+                                        <select class="form-control mySelectBoxClass  hasCustomSelect"
+                                                ng-change="priceSort(); redirectToTheFirstPage();" ng-model="sort.price">
+                                            <option value="#" disabled translate="pleaseSelect"></option>
+                                            <option value="{{'sortingAscending' | translate}}">{{'sortingAscending' | translate}}</option>
+                                            <option value="{{'sortingDescending' | translate}}">{{'sortingDescending' | translate}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="vertical-divider" style="left: -2px !important; right: auto" ng-hide="lang === 'en'"></div>
+                                </div>
+                                <div class="vertical-divider" ng-show="lang === 'en'"></div>
+                            </div>
+                            <div class="col-xs-3 offset-0" style="padding-left: 0px !important;">
+                                <button class="popularbtn left" ng-click="togglePopular($event)"
+                                        ng-class="{'active': popular}">{{'Most Popular' | translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of topfilters-->
+                </div>
+                <div class="no-filter-results no-filter-results-details text-warning" style="padding: 15px;"
+                     ng-show="filteredHotels.parent && filteredHotels.parent.length === 0">
+                    {{'nofilterResult' | translate}}
+                </div>
+                <div ng-show="filteredHotels.parent && filteredHotels.parent.length > 0" class="itemswrap"
+                     ng-if="dataReceived"
+                     ng-show="filteredHotels.parent && filteredHotels.parent.length > 0"
+                     ui-view="list"></div>
+            </div>
+        </div><!--row end-->
+    </div><!--container end-->
+</div>

@@ -1,0 +1,189 @@
+<div class="rooms-search">
+    <loader class="internal-filters-loader-container" ng-if="fetchingRooms">
+        <div class="spinner-container" style="top: 200px !important;">
+            <div class="loader">Loading...</div>
+            <div class="loading-rooms">Loading Rooms</div>
+        </div>
+    </loader> 
+    
+    <!-- Search section starts -->
+    <div class="calendar-datepicker">
+        <search-calendar ng-class="{'arabic': $root.lang === 'ar'}"
+                         start-date="search.startDate"
+                         end-date="search.endDate"
+                         is-required="true">
+        </search-calendar>
+
+        <div class="col-sm-2 col-md-3 datepicker">
+            <h5>{{'travelers' | translate}}</h5>
+            <span uib-dropdown class="date-picker-options" is-open="isOpenChosenOption">
+                            <button type="button" class="form-control dropdown-btn" style="width: 240px;"
+                                    id="btn-chosen-option" uib-dropdown-toggle>
+                                {{chosenOption.text}}
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                            <ul class="dropdown-menu" set-dropdown-width is-opens="isOpenChosenOption"
+                                dropdown-id="btn-chosen-option"
+                                ng-class="{'arabic': $root.lang === 'ar'}" uib-dropdown-menu
+                                aria-labelledby="simple-dropdown">
+                                <li><a href="javascript:void(0)" ng-click="changeOption(option)"
+                                       ng-repeat="option in datePickerOptions track by $index">{{option.text}}</a></li>
+                            </ul>
+                        </span>
+        </div>
+    </div>
+    <!-- Search section endss -->
+    <div class="clearfix"></div>
+    <!-- Guest section starts -->
+    <div class="date-guest-picker col-sm-12">
+        <div class="datePickerBG" ng-show="showGuestPicker"
+             ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}">
+            <div class="row row-guest-picker title-row hidden-xs">
+                <div class="col-sm-2 col-md-1 p-5"></div>
+                <div class="col-sm-2 col-md-2 col-title adults-title">{{'AdultsAge' | translate}}</div>
+                <div class="col-sm-2 col-md-2 col-title children-title">{{'ChildrenAge' | translate}}</div>
+                <div class="col-sm-2 col-md-2 col-title children-title"
+                     ng-show="hotelSearch.passengerInfo[0].childrenAge.length > 0">{{'AgeOfChildren' | translate}}
+                </div> 
+            </div>
+            <!-- responsible for room/adult/children showing panel starts -->
+            <div class="row row-guest-picker" ng-class="{'colxspadding': isMobile}"
+                 ng-repeat="room in hotelSearch.passengerInfo track by $index">
+                <guest-selector is-show-child-title="isShowChildTitle"
+                                passenger-info="room" room-number="$index"
+                                is-last="$last" remove-room="removeRoom()"></guest-selector>
+
+                <p ng-show="$last && !$first" class="add-guest-button remove-guest-button hidden-xs"
+                   ng-click="removeRoom()">
+                    <span class="glyphicon glyphicon-remove-circle"></span>
+                </p>
+            </div>
+            <div class="row row-guest-picker add-guest-row last-row" ng-class="{'colxspadding': isMobile}"
+                 ng-show="hotelSearch.passengerInfo.length < 4">
+                <p class="add-guest-button" ng-click="addRoom()">{{'AddRoom' | translate}} <span
+                        class="glyphicon glyphicon-plus-sign"></span></p>
+            </div>
+            <!-- responsible for room/adult/children showing panel ends -->
+
+        </div>
+        <div class="alert " style="background-color:#f05b2b;color:#FFFFFF;" role="alert" 
+                ng-show="(isAjaxRoomRates === true && hotellists === false)">
+                No room available
+        </div>
+
+    </div>
+    <!-- Guest section ends -->
+    
+</div>
+
+<div class="clearfix"></div>
+
+<div role="alert" id="reg_msg" class="alert alert-danger marginTop15" ng-show="internalErrors">
+    <span ng-repeat="(key, error) in internalErrors">{{ 'errors.'+error | translate}}<br></span>
+</div>
+
+<div ng-repeat="(key, value) in hotellists.hotelDetails.combinedAndGroupedRooms"
+     ng-if="roomsCount === 1 && !notSameBoard">
+    <div class="rooms-group">
+        <div class="rooms-group__header">
+            <div class="rooms-group__header_name">{{key | translate}}11</div>
+        </div>
+        <div class="rooms-group__room" ng-repeat="room in ::value">
+            <div class="rooms-group__room-element rooms-group__room-details">
+                <div class="rooms-group__room-name rtlclsnew" ng-bind="room.RoomType.Characteristic | translate"></div>
+                <div class="rooms-group__header_tax">
+                    <small translate="listings.taxesIncluded">(including taxes)</small>
+                </div>
+            </div>
+            <div class="rooms-group__room-element rooms-group__room-book">
+                <!--<div class="rooms-group__room-price">{{room.Price.Amount | commaSeparator}} {{room.Price.Currency}}</div>-->
+                <div class="rooms-group__room-price hotel-details-price-ar">{{room.Price.Amount |
+                    currencyConverterFilter: otlaat_currency.currencyPrice : otlaat_currency.currency: false : markupPrice | commaSeparator}}</div>
+                <div class="rooms-group__room-book-button">
+                    <button ng-click="bookNow([room], room)" class="bookbtn mt1 ng-binding" type="button">
+                        {{'btnBookNow'| translate}}
+                        <div class="loader-button" ng-show="room.isFetching">Loading...</div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div ng-repeat="(key, value) in hotellists.hotelDetails.combinedAndGroupedRooms"
+     ng-class="{'margin-top-250': $first && showGuestPicker}"
+     class="bulk-rooms"
+     ng-if="roomsCount > 1 && !notSameBoard">
+    <div class="rooms-group">
+        <div class="rooms-group__header">
+            <div class="rooms-group__header_name">{{key | translate}}22</div>
+        </div>
+        <div ng-repeat="roomsGroup in value" ng-hide="roomsGroup.length !== roomsCount" class="rooms-group-bulk__room">
+            <div class="rooms-group__room">
+                <div class="rooms-group__room-element rooms-group__room-details" ng-repeat="room in roomsGroup">
+                    <div class="rooms-group__room-name rtlclsnew" ng-bind="room.RoomType.Characteristic | translate"></div>
+                    <div class="rooms-group__header_tax">
+                        <small translate="listings.taxesIncluded">(including taxes)</small>
+                    </div>
+                    <div class="rooms-group__header_tax">
+                        {{ room.Occupancy.AdultCount }} 
+                        <span ng-if="room.Occupancy.AdultCount !== 1" translate="payment.adults"></span>
+                        <span ng-if="room.Occupancy.AdultCount === 1" translate="payment.adult"></span>
+
+                        <span ng-if="room.Occupancy.ChildCount !== 0"><span translate="comma"></span>
+                        {{ room.Occupancy.ChildCount }} 
+                        <span ng-if="room.Occupancy.ChildCount !== 1" translate="payment.children"></span>
+                        <span ng-if="room.Occupancy.ChildCount === 1" translate="payment.child"></span>
+                    </div>
+                </div>
+                <div class="rooms-group__room-element rooms-group__room-book" ng-if="$first"
+                     ng-repeat="room in roomsGroup">
+
+                    <div class="rooms-group__room-price">{{getAllRoomsPrice(roomsGroup) | currencyConverterFilter: otlaat_currency.currencyPrice : otlaat_currency.currency : false : markupPrice | commaSeparator}}
+                    </div>
+                    <div class="rooms-group__room-book-button">
+                        <button ng-click="bookNow(roomsGroup, roomsGroup)"
+                                class="bookbtn mt1 ng-binding" type="button">
+                            {{'btnBookNow'| translate}}
+                            <div class="loader-button" ng-show="roomsGroup.isFetching">Loading...</div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div ng-repeat="(key, value) in hotellists.hotelDetails.combinedAndGroupedRooms"
+     ng-class="{'margin-top-250': $first && showGuestPicker}"
+     class="bulk-rooms"
+     ng-if="notSameBoard">
+    <div class="rooms-group">
+        <div ng-repeat="roomsGroup in value" class="rooms-group-bulk__room">
+            <div class="rooms-group__room">333
+                <div class="rooms-group__room-element rooms-group__room-details" ng-repeat="room in roomsGroup">
+                    <div class="rooms-group__room-name-board" ng-bind="room.Board.Name"></div>
+                    <div class="rooms-group__room-name rtlclsnew" ng-bind="room.RoomType.Characteristic | translate"></div>
+                    <div class="rooms-group__header_tax">
+                        <small translate="listings.taxesIncluded">(including taxes)</small>
+                    </div>
+                </div>
+                <div class="rooms-group__room-element rooms-group__room-book" ng-if="$first"
+                     ng-repeat="room in roomsGroup">
+                    <div class="rooms-group__room-price">{{getAllRoomsPrice(roomsGroup) | currencyConverterFilter: otlaat_currency.currencyPrice : otlaat_currency.currency : false : markupPrice | commaSeparator}}
+                    </div>
+                    <div class="rooms-group__room-book-button">
+                        <button ng-click="bookNow(roomsGroup, roomsGroup)"
+                                class="bookbtn mt1 ng-binding" type="button">
+                            {{'btnBookNow'| translate}}
+                            <div class="loader-button" ng-show="roomsGroup.isFetching">Loading...</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

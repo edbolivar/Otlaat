@@ -1,0 +1,64 @@
+
+<div id="sidenavWrapper">
+	<div id="mySidenav" class="sidenav">
+		<div class="sidebarwrapper">
+			<div ng-controller="SideBarLoginCtrl">
+				<div ng-if="loginData" ng-controller="ModalCtrl as $ctrl">
+					<div class="sidebarMenuBg" ng-click="openedLoginMenu = !openedLoginMenu">
+						<span translate="login.helloUser" translate-value-username="{{loginData.name}}"></span>
+						<i class="icon-arrow icons"
+						   ng-class="{'icon-arrow-down': openedLoginMenu, 'icon-arrow-up': !openedLoginMenu}"></i>
+					</div>
+					<ul ng-hide="openedLoginMenu">
+						<li ui-sref="base" class="sidebarMenuBg_link" ng-click="closeMobileSidebar()">{{'Navhome' | translate}}</li>
+						<li ng-click="$ctrl.goToUserProfile();" class="sidebarMenuBg_link">{{'NavUserProfile' | translate}}</li>
+						<li ui-sref="profile.bookings" class="sidebarMenuBg_link"
+							ng-click="closeMobileSidebar()">{{'bookings.yourBookings' | translate}}</li>
+					</ul>
+				</div>
+				<div ng-if="!loginData" ng-controller="loginCtrl as loginCtrl" ng-init="isSidebar = true;">
+					<div class="sidebarMenuBg" ng-click="openedSignMenu = !openedSignMenu">
+						{{'sidebar.signInSignUp' | translate}}
+						<i class="icon-arrow icons"
+						   ng-class="{'icon-arrow-down': openedSignMenu, 'icon-arrow-up': !openedSignMenu}"></i>
+					</div>
+					<div ng-hide="openedSignMenu" class="container" style="padding-bottom: 10px; padding-top: 10px;" ng-include="templates[template.key]">
+					</div>
+				</div>
+				<div>
+					<div class="sidebarMenuBg" ng-click="openedLinksMenu = !openedLinksMenu">
+						<span>{{'sidebar.hotelLinks' | translate}}</span>
+						<i class="icon-arrow icons"
+						   ng-class="{'icon-arrow-down': openedLinksMenu, 'icon-arrow-up': !openedLinksMenu}"></i>
+					</div>
+					<ul ng-hide="openedLinksMenu">
+						<li ui-sref="about" ng-click="closeMobileSidebar()">{{'sidebar.aboutUs' | translate}}</li>
+						<li ui-sref="contact" ng-click="closeMobileSidebar()">{{'sidebar.contactUs' | translate}}</li>
+						<li ui-sref="faq" ng-click="closeMobileSidebar()">{{'sidebar.faqs' | translate}}</li>
+						<!--<li ui-sref="">Download our free app</li>-->
+					</ul>
+				</div>
+				<div ng-if="loginData" ng-click="logout()" ng-click="closeMobileSidebar()"
+					 class="logout-button sidebarMenuBg"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>{{'global.logout' | translate}}</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<span class="SidenavButton hidden-sm hidden-md hidden-lg hidden-xl" onclick="openNav()">&#9776;</span>
+
+
+<script>
+    function openNav() {
+        $("#mask").fadeIn();
+        document.getElementById("sidenavWrapper").style.left = "0px";
+        document.getElementById("mask").style.left = "80%";
+    }
+
+    function closeNav() {
+        $("#mask").fadeOut();
+        document.getElementById("sidenavWrapper").style.left = "-80%";
+        // document.getElementById("push").style.left = "0px";
+    }
+</script>
+

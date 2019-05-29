@@ -1,0 +1,33 @@
+.confirm-success-message {
+    text-align: center;
+}
+.confirm-success-message .success-icon {
+    font-size: 42px;
+    color: #0099cc;
+}
+
+.confirm-success-message .success-icon i {
+    margin: 6px auto;
+    width: 30px;
+    display: block;
+}
+
+.confirm-success-message .error-icon {
+    font-size: 42px;
+    color: #cc010c;
+}
+
+.confirm-success-message .name {
+    font-size: 1.1em;
+    color: #0099cc;
+}
+
+.confirm-success-message .downloads {
+    padding-top: 19px;
+}
+
+.confirm-success-message .downloads i {
+    cursor: pointer;
+    font-size: 20px;
+    color: #076b8c;
+}

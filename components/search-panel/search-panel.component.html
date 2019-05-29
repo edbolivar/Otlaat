@@ -1,0 +1,85 @@
+
+    <form name="hotelSearchForm"  novalidate="" id="hotelSearchForm" ng-submit="ctrl.searchHotels(hotelSearchForm)">
+    <div class="container container-ipad-fix">
+        <div>
+        <div class="datePickerBG"
+             ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full', 'zero-opacity': !ctrl.panelShown}">
+            <div class="row colxspadding">
+                <div class="datepicker col-sm-4 col-md-4" >
+                    <h5 ng-class="{'required-text': $root.showErrorDestinationMsg}">{{'goWhere' | translate}} {{$parent.showLocationSpinner}}<span ng-show="$root.showErrorDestinationMsg"> - is required!</span></h5>
+                    <div class='typeahead-demo' ng-controller="TypeaheadCtrl" style="padding-left: 0 !important;"
+                        ng-class="{'arabic': $root.lang === 'ar'}">
+                        <input id="txtDestination" required
+                               type="text" ng-model="ctrl.hotelSearch.chosenDestination" placeholder="{{'destination' | translate}}"
+                               ng-class="{'required-input': $root.showErrorDestinationMsg}"
+                               typeahead-loading="loadingLocations"
+                               typeahead-is-open="typeAheadIsOpen"
+                               uib-typeahead="item as item.name for item in getDestinations($viewValue)"
+                               typeahead-min-length="3" autocomplete="off"
+                               class="form-control location-autocomplete"/>
+                        <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                        <div ng-show="showErrorMsg"  ng-click="showErrorMsg = false"
+                             auto-close="disabled" is-open="true" uib-dropdown uib-dropdown-toggle>
+                            <ul class="dropdown-menu" set-dropdown-width is-opens="showErrorMsg" dropdown-id="txtDestination"
+                                ng-class="{'error-msg-open': showErrorMsg}">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                {{::errorMsg}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-datepicker">
+                    <search-calendar ng-class="{'arabic': $root.lang === 'ar'}"
+                         start-date="ctrl.hotelSearch.startDate" end-date="ctrl.hotelSearch.endDate" is-required="true">
+                    </search-calendar>
+
+                    <div class="col-sm-2 col-md-3 datepicker datepicker-ipad-fix">
+                        <h5>{{'travelers' | translate}}</h5>
+                        <span uib-dropdown class="date-picker-options" is-open="ctrl.isOpenChosenOption">
+                            <button type="button" class="form-control dropdown-btn" id="btn-chosen-option" uib-dropdown-toggle>
+                                {{ctrl.chosenOption.text}}
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                            <ul class="dropdown-menu" set-dropdown-width is-opens="ctrl.isOpenChosenOption" dropdown-id="btn-chosen-option"
+                                ng-class="{'arabic': $root.lang === 'ar'}" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li><a href="javascript:void(0)" ng-click="ctrl.changeOption(option)" ng-repeat="option in ctrl.datePickerOptions track by $index">{{option.text}}</a></li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Search Button -->
+                <div class="col-sm-2 col-md-1 datepicker search-button-ipad-fix">
+                    <button class="btn btn-danger datePickerSearch" type="submit">{{'datePickerSearch' | translate}}</button>
+                </div>
+            </div><!--ROW-->
+        </div><!--datePickerBG-->
+        <div class="date-guest-picker">
+            <div class="datePickerBG" ng-show="ctrl.showGuestPicker"
+                 ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}">
+                <div class="row row-guest-picker title-row hidden-xs">
+                    <div class="col-sm-2 col-md-1 p-5"></div>
+                    <div class="col-sm-2 col-md-2 col-title">{{'AdultsAge' | translate}}</div>
+                    <div class="col-sm-2 col-md-2 col-title">{{'ChildrenAge' | translate}}</div>
+                    <div class="col-sm-2 col-md-2 col-title" ng-show="ctrl.isShowChildTitle">{{'AgeOfChildren' | translate}}</div>
+                </div>
+
+                <div class="row row-guest-picker" ng-class="{'colxspadding': ctrl.isMobile}" ng-repeat="room in ctrl.hotelSearch.passengerInfo track by $index">
+                    <guest-selector is-show-child-title="ctrl.isShowChildTitle" passenger-info="room" room-number="$index" is-last="$last" remove-room="ctrl.removeRoom()">
+                    </guest-selector>
+
+                    <p ng-show="$last && !$first" class="add-guest-button remove-guest-button hidden-xs" ng-click="ctrl.removeRoom()">
+                        <span class="glyphicon glyphicon-remove-circle"></span>
+                    </p>
+                </div>
+                <div class="row row-guest-picker add-guest-row last-row" ng-class="{'colxspadding': ctrl.isMobile}" ng-show="ctrl.hotelSearch.passengerInfo.length < 4">
+                    <p class="add-guest-button" ng-click="ctrl.addRoom()">{{'AddRoom' | translate}} <span class="glyphicon glyphicon-plus-sign"></span></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div><!--container-->
+    </form>
+
+

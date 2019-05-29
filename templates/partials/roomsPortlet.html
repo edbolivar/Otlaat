@@ -1,0 +1,48 @@
+<div class="portlet">
+    <div class="portlet-header" translate="payment.hotelDetails"></div>
+    <div class="portlet-body">
+        <!--<img src="css/images/thumb.png" class="left margright20" alt="">-->
+        <div class="opensans size18 dark bold" ng-bind="payment.hotel.name"></div>
+        <span class="opensans size13 grey" ng-bind="payment.hotel.address"></span><br>
+        <img ng-src="css/images/filter-rating-{{payment.hotel.rating}}.png" class="arabic-stars" alt="">
+        <hr>
+
+        <div class="payment__hotel-details__checkin">
+            <div class="payment__hotel-details__check-label" translate="bookings.checkIn"></div>
+            <div class="payment__hotel-details__check-date direction-ltr-ar"
+                 ng-bind="payment.hotel.checkIn"></div>
+        </div>
+        <div class="payment__hotel-details__checkout">
+            <div class="payment__hotel-details__check-label" translate="payment.checkOut"></div>
+            <div class="payment__hotel-details__check-date direction-ltr-ar" ng-bind="payment.hotel.checkOut"></div>
+        </div>
+        <div class="payment__hotel-details__checkout">
+            <div class="payment__hotel-details__check-label" translate="payment.nights"></div>
+            <div class="payment__hotel-details__check-date">
+                {{payment.hotel.nights}}
+            </div>
+        </div>
+        <hr>
+        <div class="payment-rooms">
+            <div class="payment-room" ng-repeat="room in payment.rooms">
+                <div class="payment-room__board">{{room.board | translate}}</div>
+                <div class="payment-room__characteristics rtlcls" ng-bind="room.characteristics | translate"></div>
+                <div class="payment-room__adults">
+                        <i class="icon-user icons" ng-repeat="i in room.adults"></i>
+                        {{room.adults.length}}
+                    <span ng-if="room.adults.length !== 1" translate="payment.adults"></span><span ng-if="room.adults.length === 1" translate="payment.adult"></span><span ng-if="room.children.length !== 0"><span translate="comma"></span> {{room.children.length}}
+                        <span ng-if="room.children.length > 1" translate="payment.children"></span>
+                        <span ng-if="room.children.length === 1" translate="payment.child"></span>
+                    </span>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="payment-rooms__total">
+            <div class="payment-rooms__total-label" translate="global.total"></div>
+            <div class="payment-rooms__total-price hotel-details-price-ar float-left-ar"
+                 ng-bind-html="payment.price | currencyConverterFilter: currency.currencyPrice : currency.currency : true : markupPrice | commaSeparator">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<script>
+    $(function () {
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks"
+      });
+    });
+  </script>
+
+<div class="container-fluid hidden-xs" style="padding: 0 !important; z-index: 200;">
+  <div class="callbacks_container">
+    <ul class="rslides" id="slider4"
+        ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}" >
+      <li>
+        <img src="css/images/img1.jpg" alt=""
+             ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}">
+        <div class="sliderCountry">{{'SliderCountry1' | translate}}</div>
+        <div class="sliderCity">{{'SliderCity1' | translate}}</div>
+        <div class="sliderForm">{{'from' | translate}}</div>
+        <div class="sliderPrice">$1500</div>
+      </li>
+      <li>
+        <img src="css/images/img2.jpg" alt=""
+             ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}">
+        <div class="sliderCountry">{{'SliderCountry2' | translate}}</div>
+        <div class="sliderCity">{{'SliderCity2' | translate}}</div>
+        <div class="sliderForm">{{'from' | translate}}</div>
+        <div class="sliderPrice">$2500</div>
+      </li>
+      <li>
+        <img src="css/images/img3.jpg" alt=""
+             ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}">
+        <div class="sliderCountry">{{'SliderCountry3' | translate}}</div>
+        <div class="sliderCity">{{'SliderCity3' | translate}}</div>
+        <div class="sliderForm">{{'from' | translate}}</div>
+        <div class="sliderPrice">$3500</div>
+      </li>
+      <li>
+        <img src="css/images/img4.jpg" alt=""
+             ng-class="{'with-guest-picker': $root.addGuestPicker === 'room', 'with-full-guest-picker': $root.addGuestPicker === 'full'}">
+        <div class="sliderCountry">{{'SliderCountry4' | translate}}</div>
+        <div class="sliderCity">{{'SliderCity4' | translate}}</div>
+        <div class="sliderForm">{{'from' | translate}}</div>
+        <div class="sliderPrice">$4500</div>
+      </li>
+    </ul>
+  </div>
+</div>
