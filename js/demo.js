@@ -6,11 +6,11 @@ $(function(){
     event.preventDefault();
     var $this = $(this);
     
-    if (!$this.hasClass("active")) {
-      toggles.removeClass("active");
-      $this.addClass("active");
-      codes.hide().filter(this.hash).show();
-    }
+    // if (!$this.hasClass("active")) {
+    //   toggles.removeClass("active");
+    //   $this.addClass("active");
+    //   codes.hide().filter(this.hash).show();
+    // }
   });
   toggles.first().click();
 });
