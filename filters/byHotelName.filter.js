@@ -9,7 +9,7 @@
                 return items;
             } else {
                 var activeServices = [],
-                    filteredItems = [];
+                    // filteredItems = [];
                 _.each(params, function (item, index) {
                     if (item) {
                         activeServices.push((index));
