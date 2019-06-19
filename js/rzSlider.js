@@ -107,9 +107,6 @@
 
         .factory('rzThrottle', ['$timeout', function($timeout) {
             /**
-             * rzThrottle
-             *
-             * Taken from underscore project
              *
              * @param {Function} func
              * @param {number} wait
