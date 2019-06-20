@@ -7,10 +7,6 @@
  *
  * Daniel Tabuenca: https://groups.google.com/d/msg/angular/an9QpzqIYiM/r8v-3W1X5vcJ
  * for the idea on how to dynamically invoke the ng-repeat directive.
- *
- * I borrowed a couple of lines and a few attribute names from the AngularUI Bootstrap project:
- * https://github.com/angular-ui/bootstrap/blob/master/src/pagination/pagination.js
- *
  * Copyright 2014 Michael Bromley <michael@michaelbromley.co.uk>
  */
 
