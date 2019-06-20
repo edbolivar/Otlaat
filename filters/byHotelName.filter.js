@@ -15,6 +15,7 @@
                         activeServices.push((index));
                     }
                 });
+
                 if (_.isEmpty(activeServices)) {
                     return items;
                 } else {
