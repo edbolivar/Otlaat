@@ -154,25 +154,6 @@
                     initOptions();
                 });
 
-                /*function initOptions(isInitChosen) { 
-                    //console.log('$scope.hotelsSearchParams', $scope.hotelsSearchParams);
-                    $scope.datePickerOptions = [];
-                    var optionNum = 0;
-                    for (var i = 1; i <= 3; i++) {
-                        var option = {
-                            text: $translate.instant('DatePickerOption' + i),
-                            value: i
-                        };
-                        $scope.datePickerOptions.push(option);
-                        if (!isInitChosen && i === $scope.chosenOption.value) {
-                            optionNum = i;
-                        }
-                    }
-                    
-                    $scope.chosenOption = isInitChosen ? $scope.datePickerOptions[optionNum] : $scope.datePickerOptions[optionNum];
-                    
-                }*/
-
                 function initOptions(isInitChosen) {
                     $scope.datePickerOptions = [];
                     var optionNum = 0;
